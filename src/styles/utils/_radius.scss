@@ -1,0 +1,12 @@
+
+
+
+.radius_base {border-radius: $radius_base ;}
+.radius_full {border-radius: 50% ;}
+.radius_half {border-radius: $radius_half ;}
+
+@for $i from 1 through 100 { 
+    .radius_#{$i}{ 
+        border-radius: #{$i}px !important ;
+    } 
+}
