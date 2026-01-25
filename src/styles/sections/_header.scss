@@ -1,0 +1,80 @@
+/* ================================================================= */
+/* HEADER - STYLE MAROCAIN MODERNE */
+/* ================================================================= */
+.header {
+    position: sticky ;
+    top: 0px ;
+    inset-inline: 0px ;
+    z-index: 1000 ;
+    background: $bg_color ;
+    backdrop-filter: blur(10px) ;
+    overflow: hidden ;
+    border-bottom: 1px solid $border_color ;
+    .header-container {
+        height: 75px ;
+        padding-inline: 160px ;
+        margin: 0 auto ;
+        @include flex(space-between, center, 0) ;
+        position: relative ;
+        z-index: 2 ;
+    }
+}
+
+
+
+
+
+/* Logo */
+.logo {
+   cursor: pointer ;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo-text {
+    font-size: 1.7rem ;
+    font-weight: bold ;
+    background: linear-gradient(45deg, $primary, $secoundary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text ;
+    line-height: 30px ;
+}
+
+
+/* Navigation */
+.nav-list {
+    @include flex(start, center, 0) ;  
+    .nav-item {
+        position: relative;
+    } 
+    .nav-link {
+        position: relative;
+        display: flex ;
+        flex-direction: column ;
+        text-decoration: none ;
+        padding : 10px 13px ;
+        border-radius: $radius_half ;
+        .text_nav {
+            z-index : 3 !important;
+        }
+    }
+}
+.hover_anmate {
+    position: absolute ;
+    inset-inline-start: 0 ;
+    bottom: -6px ;
+    height: 3px ;
+    width: 100% ;
+    @include gradient($primary) ;
+    border-radius: $radius_half ;
+}
+
+
+
+

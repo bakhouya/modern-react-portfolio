@@ -1,0 +1,30 @@
+
+
+.btn {
+    @include btn() ;
+    cursor: pointer ;
+    font-size: 15px ;
+    font-weight: 500 ;
+}
+
+$buttons: ( "sm": 40px , "md": 45px , "lg": 50px , "xl": 54px );
+
+
+
+@each $name, $color in $colors {
+    .btn_#{$name}{ 
+        @include gradient($color) ;
+        color: white ;
+    }
+    .btn_outline_#{$name}{ 
+       border: 1px solid $color ;
+        color: $color ;
+    }
+}
+
+@each $key, $i in $buttons {
+    .btn_#{$key}{ 
+        height: $i !important ;
+        padding-inline : calc($i / 2) !important ;
+    }
+}
