@@ -1,0 +1,89 @@
+
+
+
+.model {
+    position: fixed ;
+    inset: 0 ;
+    @include flex(center, center, 0) ;
+    // background-color: rgba(19, 58, 57, 0.562) ;
+    z-index: 5000 ;
+    // display : none !important;
+}
+.model_opacity {
+    position: fixed ;
+    inset: 0 ;
+    background-color: rgba(18, 19, 19, 0.397) ;
+    z-index: 1 ;
+}
+.model_xl {
+    width: 50% ;
+    background-color: $bg_color ;
+    border-radius: $radius_base ;
+    border: 1px solid $border_color ;
+    overflow: hidden ;
+    padding: 5px 2px ;
+    z-index: 2 ;
+    box-shadow: $shadow_1 ;
+    .control_model {
+        @include flex(center, end, 0) ;
+        height: 30px ;
+        margin-inline: 10px ;
+        .close {
+            position: relative;
+            height: 30px ;
+            top: 7px ;
+            width: 30px ;
+            margin-top: 10px ;
+            border-radius: 50% ;
+            &:hover {
+                background-color: $hover_color ;
+            }
+        }
+    }
+    .content_model {
+        overflow-x: hidden ;
+        overflow-y: scroll ;
+        padding: 13px ;
+        height: 90vh ;
+        .header_model_xl {
+            .image_model_xl {
+                padding: 0 ;
+                position: relative ;
+                border-radius: $radius_base ;
+                img {
+                    width: 100% ;
+                    height:100% ;
+                    border-radius: $radius_base ;
+                }
+            }
+            .image_singal_project {
+                border: 2px solid transparent ;
+                padding: 1px ;
+                position: relative;
+                height: 50px ; width: 50px ;
+                border-radius: $radius_base ;
+                background-color: $hover_color ;
+                cursor: pointer ;
+                display: none ;
+                img {
+                    width: 100% ;
+                    height:100% ;
+                    border-radius: $radius_base ;
+                }
+                &.active {
+                    border-color: $primary ;
+                    opacity: 0.6;
+                }
+
+            }
+        }
+        .info_project_model {
+            .details_project {
+                border-radius: $radius_base ;
+                background-color: $hover_color ;
+                padding: $padding ;
+                // border: 1px solid $border_color ;
+            }
+        }
+    }
+}

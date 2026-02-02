@@ -1,0 +1,54 @@
+
+.about_section {
+    padding-top: 60px ;
+    margin-bottom: 60px ;
+    position: relative;
+    .content_about {
+        @include flex(between, center, 40px ) ;
+        position: relative;
+    }
+}
+.info_about {
+    width: 55% ;
+}
+.image_about {
+    position: relative;
+    width: 45% !important ;
+    // transform: translate3d(30deg);
+    // transform: perspective(800px) rotateY(15deg);       
+    // transform-origin: left center;
+    // clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    // clip-path: polygon(50% 20%, 100% 0, 90% 50%, 100% 100%, 100% 100%, 50% 80%, 0 100%, 10% 50%, 0 0);
+    img {
+        width: 100% ;
+        border-radius: $radius_base ;
+    }
+}
+
+.animated_radius {
+    width: 400px;
+    height: 350px;
+    background: $hover_color ;
+    animation: organic-morph 3s infinite alternate ease-in-out;
+    position: absolute ;
+    inset-block-end: 50px ;
+    inset-inline-end: 50px ;
+}
+
+@keyframes organic-morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  50% {
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  }
+  75% {
+    border-radius: 40% 60% 40% 60% / 70% 50% 50% 30%;
+  }
+  100% {
+    border-radius: 60% 40% 70% 30% / 40% 60% 30% 70%;
+  }
+}

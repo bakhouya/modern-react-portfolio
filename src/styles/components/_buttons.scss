@@ -1,24 +1,40 @@
 
-
+button {
+    border: none ;
+    outline: none ;
+    background-color: transparent ;
+    font-size: 15px ;
+    cursor: pointer ;
+    font-size: 15px ;
+    font-weight: 500 ;
+    z-index: 2 ;
+}
 .btn {
     @include btn() ;
     cursor: pointer ;
     font-size: 15px ;
     font-weight: 500 ;
+    z-index: 2 ;
 }
 
-$buttons: ( "sm": 40px , "md": 45px , "lg": 50px , "xl": 54px );
+$buttons: ("xs": 34px , "sm": 40px , "md": 45px , "lg": 50px , "xl": 54px );
 
 
 
 @each $name, $color in $colors {
     .btn_#{$name}{ 
         @include gradient($color) ;
+        // background-color: $color ;
         color: white ;
     }
     .btn_outline_#{$name}{ 
-       border: 1px solid $color ;
+        border: 2px solid $color ;
         color: $color ;
+        background-color: transparent ; 
+        &:hover {
+            background-color: $color ; 
+            color: white ;
+        }
     }
 }
 
@@ -27,4 +43,12 @@ $buttons: ( "sm": 40px , "md": 45px , "lg": 50px , "xl": 54px );
         height: $i !important ;
         padding-inline : calc($i / 2) !important ;
     }
+    .btn_icon_#{$key}{ 
+        height: $i !important ;
+        width: $i !important ;
+        border-radius: 50% ;
+    }
+}
+.bg_border {
+    background-color: $border_color ;
 }

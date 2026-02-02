@@ -1,0 +1,49 @@
+
+.skills_section {
+    margin-top: 20px ;
+    position: relative ;
+    // background-image: url('../../assets/images/hero-1.jpg');
+    background-color: $base_color ;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-position: top ;
+    padding-block: 40px ;
+    .content_skills {
+
+    }
+}
+.title_section {
+    width: 70% ;
+    margin: auto auto 20px auto ;
+    z-index: 2 ;
+    position: relative ;
+}
+.cards_skills {
+    @include grid(4) ;
+    gap: $space ;
+    .card_skill {
+        @include card() ;
+        background-color: $bg_color ;
+        border: 1px solid $border_color ;
+        border-radius: $radius_base ;
+        padding: 20px ;
+        cursor: pointer;
+        @include transition() ;
+        &:hover {
+            transform: translateY(-10px) ;
+            border: 1px solid $primary ;
+        }
+        &.more_skills {
+            background-color: $primary ;
+        }
+    }
+    .icon_skill {
+        position: relative;
+        width: 45px ;
+        margin-inline: auto ;
+        img {
+            width: 100% ;
+        }
+    }
+
+}

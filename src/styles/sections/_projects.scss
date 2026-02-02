@@ -1,0 +1,66 @@
+
+
+.projects_section {
+    padding-block: 30px ;
+}
+.cards_projects {
+    @include grid(2) ;
+    gap: 20px ;
+    .card_project {
+        cursor: pointer ;
+        position: relative;
+        overflow: hidden ;
+        &::after {
+            content: "";
+            position: absolute ;
+            inset: 20px ;
+            @include transition() ;
+            z-index: 1 ;
+            border-radius: $radius_base ;
+        }
+        &:hover {
+            &::after {
+                inset: 0px ;
+                background-color: $base_color ;
+            }
+            .image_project {
+                transform: scale(1.05);
+            }
+        }
+    }
+    .header_card, .body_card {
+        position: relative ;
+        z-index: 2 ;
+    }
+    .header_card {
+        max-height: 280px ;
+        background-color: $hover_color ;
+        border-radius: $radius_base ;
+        overflow: hidden ;
+        background-color: $base_color ;
+        .image_project {
+            @include transition() ;
+            width: 100% ;
+            height: 100% ;
+            border-radius: $radius_base ;
+            object-fit: cover ;
+        }
+    }
+    .actions_projects {
+        z-index: 2 ;
+        position: absolute ;
+        inset: auto $padding $padding auto ;
+        @include flex(start, center, 15px) ;
+    }
+}
+.avatar {
+    width: 20px ;
+    height: 20px ;
+    border-radius: 50% ;
+    position: relative ;
+    img {
+        width: 100% ;
+        height: 100% ;
+        border-radius: 50% ;
+    }
+}

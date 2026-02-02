@@ -17,6 +17,18 @@
     --text-mular: #d1d5db;     
     --text-full: #ffffff; 
 }
+:root {
+    /* Background & base */
+    --bg-color: #45454bff ;
+    --base-color: #4b4b52ff ;
+    --hover-color: #505057ff ;      
+    --border-color: rgba(255, 255, 255, 0.08) ;
+
+    /* Text colors */
+    --text-base: #dfdde2 ;
+    --text-mular: #e1e4eb ;     
+    --text-full: #ffffff ; 
+}
 /* ================================================================= */
 
 
@@ -38,3 +50,15 @@
   }
 }
 /* ================================================================= */
+:root {
+      /* Background & base */
+      --bg-color: #ffffff;
+      --base-color: #e8f1f1;
+      --hover-color: #f1f7f4;      
+      --border-color: #d2d8d5;
+
+      /* Text colors */
+      --text-base: #39434e ;
+      --text-mular: #424e5c ;    
+      --text-full: #303D4B ; 
+}
