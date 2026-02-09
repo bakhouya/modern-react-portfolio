@@ -1,17 +1,24 @@
 
 import Hero from "../sections/hero"
-import Projects from "../sections/project";
-import Certificate from "../sections/certificate";
-import Skills from "../sections/skills";
-import Services from "../sections/service";
-import About from "../sections/about";
-import Faqs from "../sections/faq";
-import ContactIndex from "../sections/media";
-import { useTrack } from "../../providers/TrackProvider";
+import Projects from "../sections/project"
+import Certificate from "../sections/certificate"
+import Skills from "../sections/skills"
+import Services from "../sections/service"
+import About from "../sections/about"
+import Faqs from "../sections/faq"
+import ContactIndex from "../sections/media"
+import NotFoundScreen from "./NotFoundScreen"
 
+// import portfolio context
+import { PortfolioContext } from "../../providers/PortfolioProvider";
+import { useContext } from "react";
 
 const Index = () => {
-    const { content } = useTrack()
+    // Get skills data from context provider
+    const { content } = useContext(PortfolioContext);
+    // Check if content data not fount return "NULL"
+    if(content.length <= 0 ) {return <NotFoundScreen/>}
+    // if we have content data return the section JSX component
     return (
         <div>
             <Hero/>

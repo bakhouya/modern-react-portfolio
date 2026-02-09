@@ -3,8 +3,6 @@
 import { createContext, useContext, useState, useEffect } from 'react' ;
 import { trackVisitor as apiTrackVisitor  } from '../services/trackService' 
 import { GetSettingsWeb as apiSettings} from '../services/trackService' 
-import { GetUser as apiUser} from '../services/trackService' 
-import { GetContent as apiContent} from '../services/trackService' 
 
 const TrackContext = createContext();
 
@@ -12,8 +10,6 @@ export const TrackProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [settings, setSettings] = useState({});
     const [visitor, setVisitor] = useState(null);
-    const [user, setUser] = useState(null);
-    const [content, setContent] = useState(null);
     const [error, setError] = useState(null);
 
     const initializeApp = () => {
@@ -22,14 +18,9 @@ export const TrackProvider = ({ children }) => {
         try {
             trackVisitor()
             getSettings()
-            getUserInfo()
-            getContentInfo()
-
-            setError(null);
-          
+            setError(null);         
         } catch (err) {
-            setError('حدث خطأ في تحميل البيانات');
-            console.error('خطأ التهيئة:', err);  
+            setError('error for get data'); 
         } finally {
             setLoading(false);
         }
@@ -56,29 +47,13 @@ export const TrackProvider = ({ children }) => {
         metaFavicon.setAttribute('href', settingsResponse.favicon)
     }
 
-    const getUserInfo = async () => {
-        const UserResponse = await apiUser();
-        setUser(UserResponse) 
-    }
-    const getContentInfo = async () => {
-        const ContentResponse = await apiContent();
-        setContent(ContentResponse) 
-    }
-
-
-
-
-
-
-
 
 
 
 
     useEffect(() => {initializeApp();}, []);
     const contextValue = {
-      loading, settings, visitor, user,
-      content ,
+      loading, settings, visitor, 
       error, retryInitialization: initializeApp};
     return (
         <TrackContext.Provider value={contextValue}>
