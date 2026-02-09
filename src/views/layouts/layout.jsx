@@ -2,7 +2,7 @@
 
 import { Outlet } from 'react-router-dom';
 import Header from './header';
-import Footer from './Footer';
+import Footer from './footer';
 import { motion, useScroll } from "framer-motion"
 import { useTrack } from '../../providers/TrackProvider';
 
