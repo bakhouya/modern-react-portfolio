@@ -5,37 +5,38 @@
 // Import files sass style
 // ==========================================================================
 @import "./themes/base" ;   
-@import "./base/base", 
-        "./base/functions", 
-        "./base/main" ;
+@import "./base/base";
+@import "./base/functions"; 
+@import "./base/main" ;
 
-@import "./utils/border",
-        "./utils/colors", 
-        "./utils/flex", 
-        "./utils/margin",
-        "./utils/padding", 
-        "./utils/radius" ;
+@import "./utils/border";
+@import "./utils/colors";
+@import "./utils/flex";
+@import "./utils/margin";
+@import "./utils/padding"; 
+@import "./utils/radius" ;
 
-@import "./components/accordin", 
-        "./components/buttons", 
-        "./components/badge",
-        "./components/cards", 
-        "./components/message", 
-        "./components/form",
-        "./components/models", 
-        "./components/text", 
-        "./utils/grid" ;
+@import "./components/accordin"; 
+@import "./components/buttons"; 
+@import "./components/badge";
+@import "./components/cards"; 
+@import "./components/message"; 
+@import "./components/form";
+@import "./components/models";
+@import "./components/text";
+@import "./utils/grid" ;
 
-@import "./sections/about", 
-        "./sections/certificate", 
-        "./sections/educations",
-        "./sections/experience", 
-        "./sections/faq", 
-        "./sections/header", 
-        "./sections/hero",
-        "./sections/projects", 
-        "./sections/services", 
-        "./sections/skills", 
-        "./sections/contact" ;
+@import "./sections/about"; 
+@import "./sections/certificate"; 
+@import "./sections/educations";
+@import "./sections/experience"; 
+@import "./sections/faq"; 
+@import "./sections/header"; 
+@import "./sections/hero";
+@import "./sections/projects"; 
+@import "./sections/services"; 
+@import "./sections/skills"; 
+@import "./sections/contact" ;
 // ==========================================================================
-@import "./themes/phone", "./themes/tablet" ;  
+@import "./themes/phone";
+@import "./themes/tablet" ;  

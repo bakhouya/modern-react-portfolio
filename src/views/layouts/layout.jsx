@@ -1,9 +1,7 @@
 
 
-
-import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Header from './Header';
+import Header from './header';
 import Footer from './Footer';
 import { motion, useScroll } from "framer-motion"
 import { useTrack } from '../../providers/TrackProvider';
