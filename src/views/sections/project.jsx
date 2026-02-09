@@ -1,11 +1,13 @@
 
 import { useState } from "react"
 import CardProject from "../../components/projects/Card"
-import { Link } from "react-router-dom"
 import { PortfolioContext } from "../../providers/PortfolioProvider";
 import { useContext } from "react";
 import DetailProject from "../../components/projects/Detail"
-import Clicked from "../../utils/Click";
+import Title from "../../components/basic/Title"
+import Clicked from "../../utils/Click" ;
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation, Autoplay} from "swiper/modules";
 
 export default function Projects({title, description}) {
     const [detail, setDetail] = useState(false)
@@ -28,30 +30,30 @@ export default function Projects({title, description}) {
             <div className="container">
                 <div className="content_projects">
 
-                    <div className="title_section">
-                        <div className="text text-3xl text-center text_primary text-semibold" data-aos="zoom-in">
-                            {title}
-                        </div>
-                        <div className="text text-base text-center my_start_3" data-aos="fade-up">
-                            {description}
-                        </div>
-                    </div>
-
-
-                    <div className="cards_projects my_start_30">
-                        {projects?.results?.map((project, index) => (
-                            <CardProject key={project?.id} index={index} project={project} showDetails={getDetails}/>
-                        ))}
-                    </div>
-
-                    {projects?.length > 5 && (
-                        <div className="flex_center_center my_start_30" data-aos="fade-up">
-                            <Link to={"https://lucide.dev/icons/send"} className="btn btn_md border_2 flex_center_center radius_30 btn_outline_primary">
-                                Show All Projects
-                            </Link>
-                        </div>
-                    )}
+                    <Title title={title} description={description} />
                     
+                    <Swiper spaceBetween={15} 
+                        slidesPerView={1}
+                        modules={[Navigation, Autoplay]}
+                        navigation={true}
+                        loop={true}
+                        speed={700}
+                        breakpoints={{
+                            640: { slidesPerView: 1, spaceBetween: 10  },
+                            768: { slidesPerView: 1, spaceBetween: 10 },
+                            1024: { slidesPerView: 2, spaceBetween: 18 },
+                        }} 
+                        className="cards_projects">
+
+                        {projects?.results?.map((project, index) => (
+                            <SwiperSlide key={project.id}>
+                                <div className="my_end_70">
+                                    <CardProject index={index} project={project} showDetails={getDetails}/>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                                        
                 </div>
             </div>
             {detail && item &&  (<DetailProject onClose={close} data={item}/>) }

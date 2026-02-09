@@ -1,5 +1,4 @@
 
-
 .hero_secrion {
     position: relative ;
     // background-image: url('../../assets/images/hero-1.jpg');
@@ -7,15 +6,7 @@
     background-size: cover ;
     background-position: top ;
 }
-// .overlay {
-//     position: absolute ;
-//     top: 0 ;
-//     left: 0 ;
-//     width: 100% ;
-//     height: 100% ;
-//     @include gradient_2(rgba(24, 24, 23, 0.603) , top) ;
-//     z-index: 1 ;
-// }
+
 .overlay_2 {
     position: absolute ;
     top: 0 ;
@@ -41,5 +32,6 @@
     border-radius: $radius_half ;
     width: max-content ;
 } 
+
 
 

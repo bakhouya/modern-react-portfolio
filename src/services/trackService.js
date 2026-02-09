@@ -52,7 +52,19 @@ export const getProjects = async () => {
         return null ;
     }
 };
-
+export const getProjectDetail = async (project) => {   
+    try {
+        const visitor =  JSON.parse(localStorage.getItem("visitor"))
+        const response = await api.get(`/public/projects/${project}/`,
+            {params: {visitor: visitor?.visitor?.id},}
+        );
+        return response.data ;      
+    } catch (error) {
+        console.error('Error Get Singals Project:', error);
+        return null ;
+    }
+    
+};
 export const likeProject = async (project, visitor) => {    
     try {
         const response = await api.post(`/public/projects/${project}/like/`, { visitor: visitor });
@@ -64,6 +76,15 @@ export const likeProject = async (project, visitor) => {
 };
 
 
+export const getAbout = async () => {
+    try {
+        const response = await api.get("/public/accounts/about/") ;
+        return response.data ;       
+    } catch (error) {
+        console.error('Error Get Abouts:', error);
+        return null ;
+    }
+};
 export const getSkills = async () => {
     try {
         const response = await api.get("/public/skills/") ;
@@ -88,6 +109,15 @@ export const getCertificate = async () => {
         return response.data ;       
     } catch (error) {
         console.error('Error Get certificates:', error);
+        return null ;
+    }
+};
+export const getFaqs = async () => {
+    try {
+        const response = await api.get("/public/faqs/") ;
+        return response.data ;       
+    } catch (error) {
+        console.error('Error Get faqs:', error);
         return null ;
     }
 };

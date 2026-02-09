@@ -1,0 +1,35 @@
+
+.faqs_section {
+    .flex_faqs {
+        position: relative ;
+        .image_faqs img {
+            width: 100% ;
+            border: 1px solid $border_color ;
+            border-radius: $radius_base ;
+        }
+    }
+}
+
+
+
+.accordion__item {
+	border-radius: $radius_base;
+    margin-bottom: 70px ;
+    cursor: pointer ;
+    padding: $space ;
+    background-color: $base_color ;
+}
+.accordion__link {
+	position: relative ;
+	border-radius: $radius_base $radius_base 0 0;
+    cursor: pointer ;
+}
+.sub-accordion {
+    display: block;
+    height: 100%;
+}
+.sub-accordion__item {
+	padding: 5px 0;
+}
+
+

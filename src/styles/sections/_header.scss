@@ -1,42 +1,59 @@
 /* ================================================================= */
 /* HEADER - STYLE MAROCAIN MODERNE */
 /* ================================================================= */
-.header {
+.header, .navigation_phone {
     position: fixed ;
     top: 0px ;
     inset-inline: 0px ;
     z-index: 1000 ;  
     padding-inline: $padding_base ;
     background-color: $bg_color ;
-    border-bottom : 1px solid $border_color ;
-    box-shadow: $shadow_1 ;
-    box-shadow: 
-        0 1px 0 rgba(0, 0, 0, 0.05),
-        0 2px 4px rgba(0, 0, 0, 0.02),
-        0 4px 8px rgba(0, 0, 0, 0.05),
-        0 8px 16px rgba(0, 0, 0, 0.02);
+    border-bottom: 1px solid $border_color ;
+    // box-shadow: 
+    //     0 1px 0 rgba(0, 0, 0, 0.05),
+    //     0 2px 4px rgba(0, 0, 0, 0.02),
+    //     0 4px 8px rgba(0, 0, 0, 0.05),
+    //     0 8px 16px rgba(0, 0, 0, 0.02);
 
     .header-container {
-        height: 70px ;
+        height: 66px ;
         margin: 0 auto ;
         @include flex(space-between, center, 0) ;
         position: relative ;
         z-index: 2 ; 
     }
 }
+.navigation_phone {
+    top: auto ;
+    bottom: 0px ;
+    height: 48px ; 
+    padding-inline: $padding_phone ;
+    border-top : 1px solid $border_color ; 
+    @include flex(space-around, center, 10px ) ;
+    display: none ;
+    .nav_link  {
+        height: 42px ;
+        width: 50px ;
+        border-radius: $radius_base ;
+        position: relative;
+        @include flex(center, center, 10px ) ;
+        &:hover {
+            background-color: $base_color ;
+        }
+    }
 
+}
 
 
 
 .logo {cursor: pointer ;}
-.logo_image {height: 70px ;}
+.logo_image {height: 49px ;}
 .logo-link {
     text-decoration: none;
     display: flex;
     flex-direction: column ;
     align-items: flex-start ;
 }
-
 .nav-list {
     @include flex(start, center, 0px) ;  
     .nav-item {
@@ -60,141 +77,23 @@
 .hover_anmate {
     position: absolute ;
     inset-inline-start: 0 ;
-    bottom: 0px ;
+    bottom: 3px ;
     height: 6% ;
     width: 100% ;
     background-color: $primary ;
     border-radius: $radius_half ;
 }
+.for_navigate {
+    bottom: auto ;
+    top: -3px ;
+}
 
 
 
 
 
-.whatsapp-button {
-    position: fixed;
-    bottom: 30px ;
-    left: 30px ;
-    background: linear-gradient(135deg, $primary 0%, #128C7E 100%);
-    border: none ;
-    border-radius: 50px ;
-    padding: 5px ;
-    @include flex(center, center, 0px) ;
-    box-shadow: $shadow_4;
-    cursor: pointer;
-    @include transition() ;
-    z-index: 1000;
-    overflow: hidden ;
-    &:hover {
-        padding-inline: 20px ;
-        .whatsapp-icon {
-            transform: rotate(15deg) scale(1.1);
-        }
-        .whatsapp-text {
-            opacity: 1 ;
-            width: auto ;
-        }
-    }
-    .whatsapp-text {
-        opacity: 0 ;
-        width: 0 ;
-        overflow: hidden;
-        white-space: nowrap ;
-        @include transition() ;
-    }
-    .whatsapp-icon {
-        width: 40px ;
-        height: 40px ;
-        border-radius: 50%;
-        @include flex(center, center, 0) ;
-        @include transition() ;
-    }
-}
-.wave-effect {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    border-radius: 50px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    animation: wave 3s linear infinite;
-    opacity: 0;
-    pointer-events: none;
-}
-@keyframes wave {
-    0% {
-        transform: translate(-50%, -50%) scale(0.8);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(1.5);
-        opacity: 0;
-    }
-}
-.pulse-effect {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: rgba(37, 211, 102, 0.2);
-    animation: pulse 2s ease-in-out infinite;
-    pointer-events: none;
-}
-@keyframes pulse {
-    0% {
-        transform: translate(-50%, -50%) scale(0.8);
-        opacity: 0.7;
-    }
-    50% {
-        transform: translate(-50%, -50%) scale(1.1);
-        opacity: 0.3;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(0.8);
-        opacity: 0.7;
-    }
-}
-@keyframes gentleShake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-2px); }
-    75% { transform: translateX(2px); }
-}
-.whatsapp-button:hover {
-    animation: gentleShake 0.5s ease-in-out;
-}
-@keyframes lightGlow {
-    0%, 100% { box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3); }
-    50% { box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6); }
-}
-.whatsapp-button {
-    animation: lightGlow 3s ease-in-out infinite;
-}
-@media (max-width: 768px) {
-    .whatsapp-button {
-        bottom: 20px;
-        right: 20px;
-        padding: 12px 20px;
-    }
-    
-    .whatsapp-text {
-        display: none; 
-    }
-    
-    .whatsapp-button:hover .whatsapp-text {
-        display: none;
-    }
-    
-    .whatsapp-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 26px;
-    }
-}
+
+
 
 
 

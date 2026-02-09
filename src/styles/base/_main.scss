@@ -13,7 +13,9 @@
 @import url('https://api.fontshare.com/v2/css?f[]=switzer@300,400,500,600,700,800,900&display=swap');
 
 
-
+@import url('https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 html, * {
     padding: 0 ;
     margin: 0 ;
@@ -25,9 +27,14 @@ html, * {
     // font-family: 'Orbitron', sans-serif ;
     // font-family: 'Chillax', sans-serif ;
     // font-family: 'Cabinet Grotesk', sans-serif ;
-    // font-family: 'Switzer', sans-serif ; 
+    font-family: 'Switzer', sans-serif ; 
     font-family: 'unageo', sans-serif ; 
+    // font-family: 'Poppins', sans-serif ; 
+    // font-family: "SN Pro", sans-serif;
+    // font-family: "Arial", sans-serif ;
     // font-family: "museo-sans-rounded", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    // font-family: "Figtree", sans-serif ;
+    font-optical-sizing: auto;
 }
 
 body.light {@include Light() ;}
@@ -37,26 +44,27 @@ body {
     margin: 0 ;
     background-color: $bg_color ;
     color: $text_base ;
-    font-weight: 500px ;
-
+    font-weight: 400 ;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
     min-height: 100vh ;
     width: 100% ;
-    overflow-x: hidden ;
+    overflow-x: hidden !important ;
     scroll-behavior: smooth;
 
     font-size: $size_base ;
     line-height: 1.5;
     text-rendering: optimizeLegibility;
 
-    -webkit-text-size-adjust: 100% ;
+    // -webkit-text-size-adjust: 100% ;
     -ms-text-size-adjust: 100% ;
     text-size-adjust: 100% ;
 }
 .container {
     padding-inline: $padding_base ;
+    // overflow-x: hidden !important ;
+    position: relative ;
 }
 
 ul {
@@ -155,6 +163,7 @@ img {
     height: 20px ;
     width: 1px ;
     background-color: $border_color ;
+    &.mx10{margin-inline: 10px ;}
 }
 .slach-sm {
     margin-inline: 10px ;
@@ -162,6 +171,7 @@ img {
     width: 1px ;
     background-color: $border_color ;
 }
+
 
 .scroll {
     position: relative;
@@ -198,6 +208,16 @@ img {
 .text_sm_dark {
     color: #424e5c !important ;
 }
+.waves {
+    width: 100% ;
+    margin-bottom: -10px ;
+}
+.wave_bottom {
+    position: relative;
+    top: -2px !important;
+}
+
+
 
 
 .footer_web {

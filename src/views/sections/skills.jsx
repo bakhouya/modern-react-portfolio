@@ -2,9 +2,12 @@
 
 import CardSkills from "../../components/skills/CardSkills"
 import Skill from "../../components/skills/Skill"
+import Title from "../../components/basic/Title"
 import { PortfolioContext } from "../../providers/PortfolioProvider";
 import { useContext } from "react";
 
+import Wavetop from "../../assets/svg/wavetop.svg"
+import WaveBottom from "../../assets/svg/wavebottom.svg"
 
 export default function Skills({title, description}) {
     const { skills } = useContext(PortfolioContext);
@@ -12,26 +15,23 @@ export default function Skills({title, description}) {
     
     return (
         <section className="skills_section" id="skills">
-            <div className="container">
-                <div className="content_skills">
-                    <div className="title_section">
-                        <div className="text text-3xl text-center text_primary text-semibold" data-aos="zoom-in">
-                            {title}
-                        </div>
-                        <div className="text text-base text-center my_start_4" data-aos="fade-up">
-                            {description}
-                        </div>
-                    </div>
+            <img src={Wavetop} alt="" className="waves" />
+            <article className="block_waves">
+                <div className="container">
+                    <div className="content_skills">
+                        <Title title={title} description={description} />
 
 
-                    <div className="cards_skills my_start_25">
-                        {skills.map((skill, index) => (
-                            <CardSkills key={skill.id} skill={skill} index={index}/>
-                        ))}
-                        {skills.length > 5 && <Skill />}
+                        <div className="cards_skills">
+                            {skills?.slice(0, 7).map((skill, index) => (
+                                <CardSkills key={skill.id} skill={skill} index={index}/>
+                            ))}
+                            {skills.length > 7 && <Skill count={skills.length}/>}
+                        </div>
                     </div>
                 </div>
-            </div>
+            </article>
+            <img src={WaveBottom} alt="" className="w_10 wave_bottom" />
         </section>
     )
 }

@@ -3,7 +3,7 @@ import { Image } from "lucide-react"
 
 
 
-export default function CardService({index, data}) {
+export default function CardService({index, data, contact}) {
 
 
 
@@ -19,8 +19,8 @@ export default function CardService({index, data}) {
                 <div className="text text-base text-center my_start_6 text-line-2"> {data?.description} </div>
             </div>
             <div className="">
-                <a href={""} className="btn btn_lg border_2 flex_center_center radius_30 w_6 btn_primary my_start_20 mx_auto">
-                    Ready to Collaborate?
+                <a href={contact} className="btn btn_lg border_2 flex_center_center radius_30 w_8 btn_primary my_start_20 mx_auto">
+                    Ready to Collaborate ?
                 </a>
             </div>
 

@@ -2,25 +2,13 @@
 .skills_section {
     margin-top: 20px ;
     position: relative ;
-    // background-image: url('../../assets/images/hero-1.jpg');
-    background-color: $base_color ;
-    background-repeat: no-repeat;
-    background-size: cover ;
-    background-position: top ;
-    padding-block: 40px ;
     .content_skills {
-
+        padding-block: 25px ;
     }
-}
-.title_section {
-    width: 70% ;
-    margin: auto auto 20px auto ;
-    z-index: 2 ;
-    position: relative ;
 }
 .cards_skills {
     @include grid(4) ;
-    gap: $space ;
+    gap: $padding ;
     .card_skill {
         @include card() ;
         background-color: $bg_color ;
@@ -31,10 +19,9 @@
         @include transition() ;
         &:hover {
             transform: translateY(-10px) ;
-            border: 1px solid $primary ;
         }
         &.more_skills {
-            background-color: $primary ;
+            background-color: $secoundary ;
         }
     }
     .icon_skill {
@@ -47,3 +34,31 @@
     }
 
 }
+.title_section {
+    width: 70% ;
+    margin: auto auto 20px auto ;
+    z-index: 2 ;
+    position: relative ;
+    margin-bottom: 30px ;
+    .title {
+        width: max-content ;
+        margin-inline: auto ;
+        position: relative ;
+        &::after, &::before {
+            content: "" ;
+            position: absolute ;
+            width: 12px ; height: 12px ;
+            border-radius: 3px ;
+            background-color: $primary ;
+            top: 50% ;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+        &::after {
+            left: -30px ;
+        }
+        &::before {
+            right: -30px ;
+        }
+    }
+}
+

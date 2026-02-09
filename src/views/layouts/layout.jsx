@@ -32,7 +32,7 @@ const Layout = () => {
                     top: 0, left: 0, 
                     right: 0, height: 4, 
                     originX: 0, zIndex: 4000 , 
-                    backgroundColor: "#2FA09D",}}/>
+                    backgroundColor: "#ff6f00",}}/>
 
             <div className="app">
                 <Header />      

@@ -7,7 +7,8 @@ import Clicked from "../../utils/Click"
 import { useState } from "react";
 
 
-export default function LikeProject({project, count, isLiked}) {
+export default function LikeProject({project, count, list}) {
+    const [countView, setCountView] = useState(count)
 
     const queryClient = useQueryClient();
     const visitor = JSON.parse(localStorage.getItem("visitor") || "{}");
@@ -16,6 +17,7 @@ export default function LikeProject({project, count, isLiked}) {
     const mutation = useMutation({
         mutationFn: () => likeProject(project, visitorId),
         onSuccess: (data) => {
+            setCountView(data.likes_count)
             queryClient.invalidateQueries({ queryKey: ["projects"] });
         },onError: (error) => {
             console.error("Like error:", error);
@@ -27,7 +29,7 @@ export default function LikeProject({project, count, isLiked}) {
     return (
         <>
         <div className="pointer flex_start_center gap_5" type="button" onClick={handleLike}>
-            <ThumbsUp  size={18} className="my_end_5"/> {count}
+            <ThumbsUp  size={18} className="my_end_4"/> {list ? count : countView}
         </div>
         </>
     )

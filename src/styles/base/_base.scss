@@ -21,14 +21,15 @@ $text_full      : var(--text-full) ;
   --cashplus-gray: #75828E ;
   --cashplus-light: #FCF3DB ;
 }
+// https://github.com/reinaldosimoes/design-resources?tab=readme-ov-file
 // =========================================================================
 //  Colors Basic #0A2463  #D4AF37 | #2D5D7C | #003F5C | #6C63FF | #0070f3
 // =========================================================================
-// $primary    : #0070f3 ; 
-$primary    : #2FA09D ; 
-// $secoundary : #D4AF37 ;
-$secoundary : #F0B538 ;
-$danger     : #DC3545 ;
+$primary    : #ff6f00 ; 
+// $primary    : #2FA09D ; 
+$secoundary : #2FA09D ;
+// $secoundary : #F0B538 ;
+$danger     : #c4404dff ;
 $success    : #28A745 ;
 $warning    : #FFC107 ;
 $info       : #343536 ;
@@ -53,12 +54,13 @@ $colors: (
 $padding        : 15px ;
 $margin         : 20px ;
 $space          : 20px ;
-$radius_base    : 12px ;
+$radius_base    : 13px ;
 $radius_circle  : 50%  ;
 $radius_half    : 30px ;
 $border_width   : 1px  ;
 $height_header  : 65px ;
-$padding_base   : 120px ;
+$padding_base   : 140px ;
+$padding_phone  : 12px ;
 $boxs: ( "xx" : 28 , "xs" : 36 , "sm" : 40 ,  "md" : 45 , "lg" : 50 , "xl" : 53 );
 $breakpoints: ( "sm": 576px , "md": 768px , "lg": 992px , "xl": 1200px);
 // =========================================================================

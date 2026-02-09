@@ -1,13 +1,7 @@
 
-import { Heart, Eye, Github, Video} from "lucide-react"
-import project from "../../assets/images/template.jpg"
-import { Link } from "react-router-dom"
-import { ImageIcon } from "lucide-react"
-import { useState } from "react"
-import DetailProject from "./Detail"
-import { motion, AnimatePresence } from 'framer-motion';
-import Clicked from "../../utils/Click"
+import { ImageIcon, Eye } from "lucide-react"
 import LikeProject from "./Like"
+import SkillsProject from "./SkillsProject"
 
 export default function CardProject({index, project, showDetails}) {
 
@@ -29,14 +23,13 @@ export default function CardProject({index, project, showDetails}) {
                     </>
                                           
                 : <div className="loading_image"><ImageIcon size={22} className="text_primary"/></div>}
- 
             </div>
 
             <div className="body_card my_start_8">
                 <div className="flex_line">
                     <div className="text text-xl text-medium single-line-title"> {project.title} </div>
                     <div className="flex_start_center other">
-                        <LikeProject project={project?.id} count={project?.likes_count} isLiked={project?.is_liked}/>
+                        <LikeProject project={project?.id} count={project?.likes_count} list={true}/>
                         <span className="slach-sm"></span>
                         <div className="pointer flex_start_center gap_5" type="button">
                             <Eye size={18}/> {project?.views_count}
@@ -46,14 +39,7 @@ export default function CardProject({index, project, showDetails}) {
                 <div className="text text-base my_start_5 text-line-2">{project?.description}</div>
 
                 <div className="flex_between_center my_start_12">
-                    <div className="flex_start_center gap_8">
-                        {project?.skills_details.map(skill => (
-                             <div key={skill.id} className="border px_10 py_4 radius_5 flex_center_center gap_6">
-                                <img src={skill?.icon} alt={skill?.title} className="avatar_xs"/>
-                                <div className="text text-xs">{skill?.title}</div>
-                            </div>
-                        ))}
-                    </div>
+                    <SkillsProject skills={project?.skills_details} />
                 </div>
             </div>
 
