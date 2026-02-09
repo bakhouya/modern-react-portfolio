@@ -1,0 +1,115 @@
+
+@media (max-width: 640px) {
+    body {padding-bottom: 48px ;  }
+    .wave_bottom {top: -7px !important;}
+    .footer_web {display: none ;}
+    // =================Hero=====================================
+    .content_hero {
+        width: 90% ;
+        margin: auto ;
+        padding-top: 40px ;
+    }
+    // ==================Header=================================
+    .header {
+        padding-inline: $padding_phone ;
+        .logo_image {height: 40px ;}
+        .btn_lg, .nav-list {
+            Display : none ;  
+        }
+        .header-container {
+            height: 58px ;
+        }
+    }
+    .navigation_phone {
+        @include flex(space-around, center, 10px ) ;
+    }
+   
+    // ================About================================
+    .about_section {
+        margin-bottom: 20px !important ;
+        .content_about {
+            Display: block !important ; 
+            .card_about:last-child {
+                .hr_primary {display:  none ;}
+            }
+            .info_about {
+                width: 100% !important ;
+                text-align: center !important ;
+                padding-inline: 20px ;
+                .hr_first {display:  none ;}
+            }
+            .image_about {
+                width: 80% !important;
+                margin: auto ;
+                margin-bottom: 10px ;
+            }
+        }
+    }
+    
+
+    // ============Skills==================================
+    .skills_section {
+        margin-top: 20px ;
+        padding-block: 0px ;  
+    }
+    .cards_skills {
+        @include grid(2) ;
+        gap: $padding ;
+    }
+    .projects_section {
+        padding-block: 20px ;
+        margin-top: 0 !important;
+    }
+    .services_section {
+        padding-block : 15px ;
+        margin: 0 ;
+    }
+    .title_section {
+        margin-bottom: 25px ;
+        width: 80% ;
+    }
+    .cards_projects, .cards_services, .cards_faqs {
+        @include grid(1) ;
+        gap: calc($padding - 4px) ;
+        .card_service {
+            border: none ; 
+            padding: 0 ;
+        }
+    }
+    // =================Certificates=======================
+    .certificate_section {
+        margin-top: 0 !important;
+        .card_certificate {
+            flex-wrap: wrap ;
+            @include flex(start, start, 0px) ;
+            .info_certifcate {
+                width: 100% !important ;
+                margin-top: -10px ;
+            }
+        }
+    }
+
+    // =================Projects============================
+    .model {
+         @include flex(center, end, 0) ;
+    }
+    .model_xl {
+        width: 100% ;
+    }
+    .content_model {
+        height: calc(100vh - 80px) !important;
+        .hidden_text {display: none ;}
+    }
+    // ===================Contact==================================
+    .contacts_chaine {
+        @include grid(1) ;
+        gap: $padding ;
+    }
+    .header_contact_index {
+        left: 5% ;
+        width: 90% ;
+        transform: translateX(-0%);
+    }
+   
+    
+}

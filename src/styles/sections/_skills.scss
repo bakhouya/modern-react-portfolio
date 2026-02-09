@@ -1,0 +1,64 @@
+
+.skills_section {
+    margin-top: 20px ;
+    position: relative ;
+    .content_skills {
+        padding-block: 25px ;
+    }
+}
+.cards_skills {
+    @include grid(4) ;
+    gap: $padding ;
+    .card_skill {
+        @include card() ;
+        background-color: $bg_color ;
+        border: 1px solid $border_color ;
+        border-radius: $radius_base ;
+        padding: 20px ;
+        cursor: pointer;
+        @include transition() ;
+        &:hover {
+            transform: translateY(-10px) ;
+        }
+        &.more_skills {
+            background-color: $secoundary ;
+        }
+    }
+    .icon_skill {
+        position: relative;
+        width: 45px ;
+        margin-inline: auto ;
+        img {
+            width: 100% ;
+        }
+    }
+
+}
+.title_section {
+    width: 70% ;
+    margin: auto auto 20px auto ;
+    z-index: 2 ;
+    position: relative ;
+    margin-bottom: 30px ;
+    .title {
+        width: max-content ;
+        margin-inline: auto ;
+        position: relative ;
+        &::after, &::before {
+            content: "" ;
+            position: absolute ;
+            width: 12px ; height: 12px ;
+            border-radius: 3px ;
+            background-color: $primary ;
+            top: 50% ;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+        &::after {
+            left: -30px ;
+        }
+        &::before {
+            right: -30px ;
+        }
+    }
+}
+

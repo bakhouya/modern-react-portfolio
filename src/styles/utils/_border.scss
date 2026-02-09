@@ -1,7 +1,7 @@
 
 
 
-.border {border: $border_width solid $border_color ;}
+.border {border: $border_width solid $border_color !important;}
 
 .border_y_start {border-block-start : 1px solid $border_color  ;}
 .border_y_end {border-block-end : 1px solid $border_color  ;}
@@ -15,9 +15,12 @@
     .border_#{$name} { border-color: $color !important;}
 }
 
-@for $i from 1 through 10 {
-    .w_#{$i}0 { width: #{$i}0%;}
-    .h_#{$i}0 { height: #{$i}0%;}
+@for $i from 1 through 100 {
+    .w_#{$i} { width: unquote("#{$i}0%")  !important;}
+    .h_#{$i} { height: unquote("#{$i}0%")  !important;}
+    .border_#{$i} {
+        border-width: #{$i}px !important ;
+    }
 }
 
 .w_full {width: 100% ;}

@@ -1,0 +1,37 @@
+
+.hero_secrion {
+    position: relative ;
+    // background-image: url('../../assets/images/hero-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-position: top ;
+}
+
+.overlay_2 {
+    position: absolute ;
+    top: 0 ;
+    left: 0 ;
+    width: 100% ;
+    height: 100% ;
+    @include gradient_3(rgba(24, 24, 23, 0.548) , top) ;
+    z-index: 1 ;
+}
+.content_hero {
+    height: calc(100vh - 120px) ;
+    z-index: 3 !important ;
+    position: relative ;
+    width: 80% ;
+    margin: auto ;
+    padding-top: 50px ;
+}
+
+
+.badge_primary {
+    padding: 3px 20px ;
+    border: 1px solid $border_color; 
+    border-radius: $radius_half ;
+    width: max-content ;
+} 
+
+
+

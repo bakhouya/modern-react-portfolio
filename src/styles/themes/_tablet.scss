@@ -1,0 +1,28 @@
+
+@media (max-width: 940px)  {
+    .container, .header {
+        padding-inline: 30px !important ;
+    }
+    .header {
+        .btn_lg {
+            Display : none ;  
+        }
+    }
+     // =================Projects============================
+    .model {
+         @include flex(center, center, 0) ;
+    }
+    .model_xl {
+        width: 80% ;
+    }
+    .content_model {
+        height: calc(90vh - 50px) !important;
+        .hidden_text {display: none ;}
+    }
+
+
+    .contacts_chaine {
+        @include grid(1) ;
+        gap: $padding ;
+    }
+}

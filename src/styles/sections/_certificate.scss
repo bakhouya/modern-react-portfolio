@@ -1,0 +1,51 @@
+
+
+.certificate_section {
+    position: relative ;
+    .block_waves {
+        position: relative ;
+        padding-block: 15px ;
+    }
+    .content_certificate {
+        padding-bottom: 20px ;
+       
+    }
+    
+}
+.block_waves {
+    background-color: $base_color ;
+}
+.cards_certificate {
+    position: relative ;
+    z-index: 2 ;
+    .card_certificate {
+        position: relative ;
+        padding: 15px ;
+        padding-inline-start: 25px ;
+        background-color: $bg_color ;
+        border-radius: $radius_base ;
+        border-inline-start: 7px solid $bg_color ;
+        cursor: pointer;
+        @include transition() ;
+        overflow: hidden ;
+        margin-bottom: 70px ;
+        &:hover {
+            transform: translateY(-10px);
+        }
+        &::after {
+            content: "" ;
+            position: absolute ;
+            height: 75px ;
+            width: 3px ;
+            inset-inline-start: 8px ;
+            border: 1px solid $border_color ;
+            top: 50% ;
+            transform: translateY(-50%);
+            background-color: $secoundary ;
+            border-radius: $radius_base ;
+            background-image: -webkit-linear-gradient(top, $primary, $secoundary, $primary);
+        }
+    }
+}
+
+

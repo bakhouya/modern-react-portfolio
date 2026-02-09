@@ -1,79 +1,98 @@
 /* ================================================================= */
 /* HEADER - STYLE MAROCAIN MODERNE */
 /* ================================================================= */
-.header {
-    position: sticky ;
+.header, .navigation_phone {
+    position: fixed ;
     top: 0px ;
     inset-inline: 0px ;
-    z-index: 1000 ;
-    background: $bg_color ;
-    backdrop-filter: blur(10px) ;
-    overflow: hidden ;
+    z-index: 1000 ;  
+    padding-inline: $padding_base ;
+    background-color: $bg_color ;
     border-bottom: 1px solid $border_color ;
+    // box-shadow: 
+    //     0 1px 0 rgba(0, 0, 0, 0.05),
+    //     0 2px 4px rgba(0, 0, 0, 0.02),
+    //     0 4px 8px rgba(0, 0, 0, 0.05),
+    //     0 8px 16px rgba(0, 0, 0, 0.02);
+
     .header-container {
-        height: 75px ;
-        padding-inline: 160px ;
+        height: 66px ;
         margin: 0 auto ;
         @include flex(space-between, center, 0) ;
         position: relative ;
-        z-index: 2 ;
+        z-index: 2 ; 
     }
 }
+.navigation_phone {
+    top: auto ;
+    bottom: 0px ;
+    height: 48px ; 
+    padding-inline: $padding_phone ;
+    border-top : 1px solid $border_color ; 
+    @include flex(space-around, center, 10px ) ;
+    display: none ;
+    .nav_link  {
+        height: 42px ;
+        width: 50px ;
+        border-radius: $radius_base ;
+        position: relative;
+        @include flex(center, center, 10px ) ;
+        &:hover {
+            background-color: $base_color ;
+        }
+    }
 
-
-
-
-
-/* Logo */
-.logo {
-   cursor: pointer ;
 }
 
+
+
+.logo {cursor: pointer ;}
+.logo_image {height: 49px ;}
 .logo-link {
     text-decoration: none;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column ;
+    align-items: flex-start ;
 }
-
-.logo-text {
-    font-size: 1.7rem ;
-    font-weight: bold ;
-    background: linear-gradient(45deg, $primary, $secoundary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text ;
-    line-height: 30px ;
-}
-
-
-/* Navigation */
 .nav-list {
-    @include flex(start, center, 0) ;  
+    @include flex(start, center, 0px) ;  
     .nav-item {
-        position: relative;
+        position: relative ;
     } 
     .nav-link {
-        position: relative;
-        display: flex ;
-        flex-direction: column ;
+        position: relative ;
         text-decoration: none ;
-        padding : 10px 13px ;
+        padding : 10px 12px ;
         border-radius: $radius_half ;
         .text_nav {
-            z-index : 3 !important;
+            z-index : 3 !important ;
+            @include transition();
+            &.active {
+                color: $primary !important ;
+            }
         }
+        
     }
 }
 .hover_anmate {
     position: absolute ;
     inset-inline-start: 0 ;
-    bottom: -6px ;
-    height: 3px ;
+    bottom: 3px ;
+    height: 6% ;
     width: 100% ;
-    @include gradient($primary) ;
+    background-color: $primary ;
     border-radius: $radius_half ;
 }
+.for_navigate {
+    bottom: auto ;
+    top: -3px ;
+}
+
+
+
+
+
+
 
 
 
