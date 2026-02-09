@@ -1,20 +1,26 @@
 
-import about from "../../assets/images/about.jpg"
+// import dynamic title headile section 
 import Title from "../../components/basic/Title"
+// import Portfolio Context providers
 import { PortfolioContext } from "../../providers/PortfolioProvider";
 import { useContext } from "react"; 
 
 export default function About({title, description}) {
+    // Get user & abouts data from Context provider
     const {user, abouts } = useContext(PortfolioContext);
- 
+    // Check if abouts data not fount return "NULL"
+    if(abouts.results.length <= 0 ) {return null}
+    // if we have about data return the section JSX component
     return (
         <section className="about_section" id="about">
             <div className="animated_radius"></div>
             <div className="container">
+                {/* include component dynamic Title */}
                 <Title title={title} description={description} />
+                {/* Content section about */}
                 <div className="content_about">
                     <div className="image_about" data-aos="fade-right">
-                        <img src={user?.profile?.avatar} alt={about?.title} />
+                        <img src={user?.profile?.avatar} alt="about section image" loading="lazy"/>
                     </div>
                     <div className="info_about">
                         <div className="">

@@ -3,7 +3,7 @@
 import api from "./api" ;
 
 
-
+// track visitor service
 export const trackVisitor = async () => {
     try {
         const response = await api.get('/visitors/track/');
@@ -13,6 +13,7 @@ export const trackVisitor = async () => {
         return null ;
     }
 };
+// get settings data service
 export const GetSettingsWeb = async () => {
     try {
         const response = await api.get("/public/platform/") ;
@@ -22,6 +23,7 @@ export const GetSettingsWeb = async () => {
         return null ;
     }
 };
+// get user data service
 export const GetUser = async () => {
     try {
         const response = await api.get("/public/accounts/user/data/") ;
@@ -31,6 +33,7 @@ export const GetUser = async () => {
         return null ;
     }
 };
+// get content data service
 export const GetContent = async () => {
     try {
         const response = await api.get("/public/content/") ;
@@ -42,7 +45,7 @@ export const GetContent = async () => {
 };
 
 
-
+// get list projects service
 export const getProjects = async () => {
     try {
         const response = await api.get("/public/projects/") ;
@@ -52,6 +55,7 @@ export const getProjects = async () => {
         return null ;
     }
 };
+// get singal project service
 export const getProjectDetail = async (project) => {   
     try {
         const visitor =  JSON.parse(localStorage.getItem("visitor"))
@@ -65,6 +69,7 @@ export const getProjectDetail = async (project) => {
     }
     
 };
+// liked singal project service
 export const likeProject = async (project, visitor) => {    
     try {
         const response = await api.post(`/public/projects/${project}/like/`, { visitor: visitor });
@@ -75,7 +80,7 @@ export const likeProject = async (project, visitor) => {
     }
 };
 
-
+//  get about data service
 export const getAbout = async () => {
     try {
         const response = await api.get("/public/accounts/about/") ;
@@ -85,6 +90,7 @@ export const getAbout = async () => {
         return null ;
     }
 };
+//  get skills data service
 export const getSkills = async () => {
     try {
         const response = await api.get("/public/skills/") ;
@@ -94,6 +100,7 @@ export const getSkills = async () => {
         return null ;
     }
 };
+//  get services data service
 export const getServices = async () => {
     try {
         const response = await api.get("/public/services/") ;
@@ -103,6 +110,7 @@ export const getServices = async () => {
         return null ;
     }
 };
+//  get certificates data service
 export const getCertificate = async () => {
     try {
         const response = await api.get("/public/certificates/") ;
@@ -112,6 +120,7 @@ export const getCertificate = async () => {
         return null ;
     }
 };
+//  get faqs data service
 export const getFaqs = async () => {
     try {
         const response = await api.get("/public/faqs/") ;
