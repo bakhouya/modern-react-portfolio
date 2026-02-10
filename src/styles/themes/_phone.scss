@@ -13,6 +13,11 @@
     // ==================Header=================================
     .header {
         padding-inline: $padding_phone ;
+        box-shadow: 
+            0 1px 0 rgba(0, 0, 0, 0.05),
+            0 2px 4px rgba(0, 0, 0, 0.02),
+            0 4px 8px rgba(0, 0, 0, 0.05),
+            0 8px 16px rgba(0, 0, 0, 0.02);
         .logo_image {height: 40px ;}
         .btn_lg, .nav-list {
             Display : none ;  
@@ -23,6 +28,11 @@
     }
     .navigation_phone {
         @include flex(space-around, center, 10px ) ;
+        box-shadow: 
+            0 1px 0 rgba(0, 0, 0, 0.05),
+            0 2px 4px rgba(0, 0, 0, 0.02),
+            0 4px 8px rgba(0, 0, 0, 0.05),
+            0 8px 16px rgba(0, 0, 0, 0.02);
     }
    
     // ================About================================

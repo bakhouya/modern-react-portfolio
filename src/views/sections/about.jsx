@@ -28,7 +28,7 @@ export default function About({title, description}) {
                             {abouts?.results?.slice(0, 4).map((about) => (
                                 <div key={about?.id} className="card_about">
                                     <div className="item_about" data-aos="fade-up" data-aos-delay={150}>
-                                        <div className="text text-xl text-semibold "> {about?.title} </div>
+                                        <h3 className="text text-xl text-semibold "> {about?.title} </h3>
                                         <div className="text text-base my_start_8">{about?.description} </div>
                                     </div>
                                     <div className="hr_primary"></div>
