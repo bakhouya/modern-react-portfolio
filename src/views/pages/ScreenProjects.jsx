@@ -68,7 +68,6 @@ export default function ScreenProjects() {
                     {detail && item &&  (<DetailProject onClose={close} data={item}/>) }
 
                     {filteredProjects.length === 0 && searchTerm && (<NotFound value={searchTerm} search={true}/>)}
-                    {filteredProjects.length === 0 && (<NotFound value={searchTerm}/>)}
                 </div>
             </section>
 

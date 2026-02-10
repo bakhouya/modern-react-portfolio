@@ -28,7 +28,7 @@ html, * {
     // font-family: 'Chillax', sans-serif ;
     // font-family: 'Cabinet Grotesk', sans-serif ;
     font-family: 'Switzer', sans-serif ; 
-    font-family: 'unageo', sans-serif ; 
+    font-family: 'unageo', 'Switzer', sans-serif ; 
     // font-family: 'Poppins', sans-serif ; 
     // font-family: "SN Pro", sans-serif;
     // font-family: "Arial", sans-serif ;
@@ -42,7 +42,6 @@ body {
     margin: 0 ;
     background-color: $bg_color ;
     color: $text_base ;
-    font-weight: 400 ;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 

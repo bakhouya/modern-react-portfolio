@@ -52,7 +52,6 @@ export default function ScreenSkills() {
                     </article>
 
                     {filterData.length === 0 && searchTerm && ( <NotFound value={searchTerm} serach={true}/>)}
-                    {filterData.length === 0 &&  (<NotFound value={searchTerm}/>)}
                 </div>
             </section>
             

@@ -8,7 +8,7 @@
         width: 100% ;
         margin: auto ;
         padding-top: 40px ;
-        height: calc(100vh - 200px) ;
+        height: calc(100vh - 240px) ;
     }
     // ==================Header=================================
     .header {
@@ -94,7 +94,7 @@
          @include flex(center, end, 0) ;
     }
     .model_xl {
-        width: 100% ;
+        width: 100% !important ;
     }
     .content_model {
         height: calc(100vh - 80px) !important;

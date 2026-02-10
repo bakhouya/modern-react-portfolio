@@ -8,8 +8,8 @@ export default function NotFound({value, search}) {
                         <img src={NotFoundImage} alt="Not found icon" className="image_notFound"/>
                     </div>
                     {search 
-                    ? <p className='text text-xl text-medium text-center'>No projects found for "{value}"</p>
-                    : <p className='text text-xl text-medium text-center'>No Projects Data</p>}
+                    ? <p className='text text-xl text-medium text-center'>No data found for "{value}"</p>
+                    : <p className='text text-xl text-medium text-center'>No data found</p>}
                     
                 </div>
             </div>

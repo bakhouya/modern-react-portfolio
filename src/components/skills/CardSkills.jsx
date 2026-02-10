@@ -21,7 +21,7 @@ export default function CardSkills({skill, index}) {
                 }}> 
                 {skill?.level} - {skill?.percentage}% 
             </div>
-            <div className="text text-sm text-center my_start_2"> {skill?.category.title} </div>
+            <div className="text text-sm text-center my_start_2 text_secoundary"> {skill?.category.title} </div>
         </div>
     )
 
