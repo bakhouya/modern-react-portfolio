@@ -2,42 +2,42 @@
 
 
 // ==========================================================================
-// use files sass style
+// import files sass style
 // ==========================================================================
-@use "./themes/light";   
-@use "./themes/font";   
-@use "./base/base";
-@use "./base/functions"; 
-@use "./base/main" ;
+@import "./themes/light";   
+@import "./themes/font";   
+@import "./base/base";
+@import "./base/functions"; 
+@import "./base/main" ;
 
-@use "./utils/border";
-@use "./utils/colors";
-@use "./utils/flex";
-@use "./utils/margin";
-@use "./utils/padding"; 
-@use "./utils/radius" ;
+@import "./utils/border";
+@import "./utils/colors";
+@import "./utils/flex";
+@import "./utils/margin";
+@import "./utils/padding"; 
+@import "./utils/radius" ;
 
-@use "./components/accordin"; 
-@use "./components/buttons"; 
-@use "./components/badge";
-@use "./components/cards"; 
-@use "./components/message"; 
-@use "./components/form";
-@use "./components/models";
-@use "./components/text";
-@use "./utils/grid";
+@import "./components/accordin"; 
+@import "./components/buttons"; 
+@import "./components/badge";
+@import "./components/cards"; 
+@import "./components/message"; 
+@import "./components/form";
+@import "./components/models";
+@import "./components/text";
+@import "./utils/grid";
 
-@use "./sections/about"; 
-@use "./sections/certificate"; 
-@use "./sections/educations";
-@use "./sections/experience"; 
-@use "./sections/faq"; 
-@use "./sections/header"; 
-@use "./sections/hero";
-@use "./sections/projects"; 
-@use "./sections/services"; 
-@use "./sections/skills"; 
-@use "./sections/contact";
+@import "./sections/about"; 
+@import "./sections/certificate"; 
+@import "./sections/educations";
+@import "./sections/experience"; 
+@import "./sections/faq"; 
+@import "./sections/header"; 
+@import "./sections/hero";
+@import "./sections/projects"; 
+@import "./sections/services"; 
+@import "./sections/skills"; 
+@import "./sections/contact";
 // ==========================================================================
-@use "./themes/phone";
-@use "./themes/tablet";  
+@import "./themes/phone";
+@import "./themes/tablet";  
