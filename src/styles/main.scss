@@ -4,7 +4,8 @@
 // ==========================================================================
 // Import files sass style
 // ==========================================================================
-@import "./themes/base" ;   
+@import "./themes/light";   
+@import "./themes/font";   
 @import "./base/base";
 @import "./base/functions"; 
 @import "./base/main" ;
@@ -24,7 +25,7 @@
 @import "./components/form";
 @import "./components/models";
 @import "./components/text";
-@import "./utils/grid" ;
+@import "./utils/grid";
 
 @import "./sections/about"; 
 @import "./sections/certificate"; 
@@ -36,7 +37,7 @@
 @import "./sections/projects"; 
 @import "./sections/services"; 
 @import "./sections/skills"; 
-@import "./sections/contact" ;
+@import "./sections/contact";
 // ==========================================================================
 @import "./themes/phone";
-@import "./themes/tablet" ;  
+@import "./themes/tablet";  

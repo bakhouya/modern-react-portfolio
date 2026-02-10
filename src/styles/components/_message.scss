@@ -1,0 +1,12 @@
+
+
+// ===============error page==================================
+.error_section {
+    @include flex(center, center, 0px) ;
+    height: 80vh ;
+    .content_error_page {
+        .icon_page_error {
+            color: $danger ;
+        }
+    }
+}

@@ -1,14 +1,14 @@
 
 import {  Facebook, Youtube, Instagram, Linkedin, Mail, PhoneCall,  MessageCircleIcon, Github } from "lucide-react"
-import { Link } from "react-router-dom"
-import { useTrack } from "../../providers/TrackProvider"
 import Wavetop from "../../assets/svg/wavetop.svg"
 import CardContact from "../../components/contacts/ContactCard"
 import MediaIcon from "../../components/contacts/MediaItem"
 import MediaTitle from "../../components/contacts/MediaTitle"
+import { PortfolioContext } from "../../providers/PortfolioProvider";
+import { useContext } from "react"
 
 export default function ContactIndex({title, description}) {
-    const { user } = useTrack()
+    const { user } = useContext(PortfolioContext)
     return (
         <section className="contact_index">
             <img src={Wavetop} alt="" className="waves" />
@@ -22,7 +22,7 @@ export default function ContactIndex({title, description}) {
 
                         <div className="contact_info my_start_50">
                             <MediaTitle 
-                                title="Get In Touch"
+                                title="Let we talk"
                                 description="Feel free to reach out via email, WhatsApp, or phone. I’m always open to new opportunities"/>
   
                             <div className="contacts_chaine">
@@ -42,7 +42,7 @@ export default function ContactIndex({title, description}) {
 
                         <div className="folows_chaine my_start_30">
                             <MediaTitle 
-                                title="Folow Me"
+                                title="Folow me"
                                 description="Folow me on social media and explore more of my work and experience"/>
 
                             <div className="flex_center_center gap_15">

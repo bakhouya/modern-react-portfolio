@@ -1,12 +1,12 @@
 
 // import useState meduls from react
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 // import Link component from react router
 import { Link } from 'react-router-dom';
 // import motion for animation
 import { motion } from "framer-motion" ;
-// import useTrach context
-import { useTrack } from '../../providers/TrackProvider';
+// import portfolio Context
+import { PortfolioContext } from "../../providers/PortfolioProvider";
 // import utils Clicked 
 import Clicked from "../../utils/Click"
 // import routes path
@@ -18,7 +18,7 @@ export default function Header(){
     // state hover clicked link
     const [hoveredLink, setHoveredLink] = useState(0);
     // Get settings data from useTrack
-    const { settings } = useTrack() 
+    const { settings } = useContext(PortfolioContext) 
     // List navbar (path, label, icon)
     const navLinks = [
         { path: "#hero", label: "Home", icon: <Home size={20} /> },

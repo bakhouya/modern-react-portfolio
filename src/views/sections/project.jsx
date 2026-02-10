@@ -3,6 +3,7 @@ import { useState, useContext } from "react"
 // import (CardProject, Title) components
 import CardProject from "../../components/projects/Card"
 import Title from "../../components/basic/Title"
+import DetailProject from "../../components/projects/Detail"
 // import context provider
 import { PortfolioContext } from "../../providers/PortfolioProvider";
 // import utils clicked

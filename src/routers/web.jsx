@@ -7,21 +7,27 @@ import ScreenProjects from "../views/pages/ScreenProjects"
 import ScreenSkills from "../views/pages/ScreenSkills"
 import ROUTES from '/src/routers/path'
 import NotFoundScreen from "../views/pages/NotFoundScreen"
+import ErrorPage from "../views/pages/ErrorPage"
+import RootLayout from "./RootLayout"
 
 export const RouterUrl = createBrowserRouter([
     {
-        element: <Layout />,
+        element: <RootLayout />, 
         children: [
-            {path: ROUTES.HOME, element: (<Index />),},
-            // {path: ROUTES.PROJECTS, element: (<ScreenProjects />),},
-            // {path: ROUTES.SKILLS, element: (<ScreenSkills />),},
+            {
+                element: <Layout />,
+                children: [
+                    { path: ROUTES.HOME, element: <Index /> },
+                ]
+            },  
+            {path: ROUTES.SKILLS, element: (<ScreenSkills />),},
+            {path: ROUTES.PROJECTS, element: (<ScreenProjects />),},      
+            { path: "*",  element: <NotFoundScreen /> },
         ],
     },
-    {path: ROUTES.SKILLS, element: (<ScreenSkills />),},
-    {path: ROUTES.PROJECTS, element: (<ScreenProjects />),},
-    { path: "*", element: <NotFoundScreen /> },
+    // route error page without RootLatout
+    { path: ROUTES.ERROR,  element: <ErrorPage /> },
 ]);
 
 export default RouterUrl;
-
 

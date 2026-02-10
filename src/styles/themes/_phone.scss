@@ -5,9 +5,10 @@
     .footer_web {display: none ;}
     // =================Hero=====================================
     .content_hero {
-        width: 90% ;
+        width: 100% ;
         margin: auto ;
         padding-top: 40px ;
+        height: calc(100vh - 200px) ;
     }
     // ==================Header=================================
     .header {
@@ -46,7 +47,6 @@
         }
     }
     
-
     // ============Skills==================================
     .skills_section {
         margin-top: 20px ;
@@ -101,6 +101,12 @@
         .hidden_text {display: none ;}
     }
     // ===================Contact==================================
+    .contact_index {
+        margin-top: 100px ;   
+        .content_contact {
+            padding-block: 40px ;    
+        }
+    }
     .contacts_chaine {
         @include grid(1) ;
         gap: $padding ;

@@ -13,7 +13,6 @@ import { Navigation, Autoplay} from "swiper/modules" ;
 import { PortfolioContext } from "../../providers/PortfolioProvider";
 import { useContext } from "react";
 
-
 export default function Certificate({title, description}) {
     // Get certificates data from portfolio context
     const { certificates } = useContext(PortfolioContext) ;

@@ -4,21 +4,10 @@ import { Outlet } from 'react-router-dom';
 import Header from './header';
 import Footer from './footer';
 import { motion, useScroll } from "framer-motion"
-import { useTrack } from '../../providers/TrackProvider';
 
 
 const Layout = () => {
     const { scrollYProgress } = useScroll()
-    const { loading } = useTrack();
-
-    if (loading) {
-        return (
-            <div className='container_loader'>
-                <div className="loader"></div>
-            </div>
-        );
-    }
-
 
     return (
 
@@ -41,6 +30,7 @@ const Layout = () => {
 
 
     );
+    
 };
 
 export default Layout;

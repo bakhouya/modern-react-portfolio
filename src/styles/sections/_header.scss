@@ -9,11 +9,11 @@
     padding-inline: $padding_base ;
     background-color: $bg_color ;
     border-bottom: 1px solid $border_color ;
-    // box-shadow: 
-    //     0 1px 0 rgba(0, 0, 0, 0.05),
-    //     0 2px 4px rgba(0, 0, 0, 0.02),
-    //     0 4px 8px rgba(0, 0, 0, 0.05),
-    //     0 8px 16px rgba(0, 0, 0, 0.02);
+    box-shadow: 
+        0 1px 0 rgba(0, 0, 0, 0.05),
+        0 2px 4px rgba(0, 0, 0, 0.02),
+        0 4px 8px rgba(0, 0, 0, 0.05),
+        0 8px 16px rgba(0, 0, 0, 0.02);
 
     .header-container {
         height: 66px ;
