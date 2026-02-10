@@ -28,6 +28,11 @@ export default function DetailProject({data, onClose }) {
         Clicked()
         carousel > 0 ? setCarousel(carousel - 1): setCarousel(data?.images_details.length - 1)
     }
+    if(project.isLoading) {
+        <div className='container_loader'>
+            <div className="lds-ripple"><div></div><div></div></div>
+        </div>
+    }
     return (
         <AnimatePresence>
         

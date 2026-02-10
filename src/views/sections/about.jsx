@@ -19,7 +19,7 @@ export default function About({title, description}) {
                 <Title title={title} description={description} />
                 {/* Content section about */}
                 <div className="content_about">
-                    <div className="image_about" data-aos="fade-right">
+                    <div className="image_about" data-aos="fade-up">
                         <img src={user?.profile?.avatar} alt="about section image" loading="lazy"/>
                     </div>
                     <div className="info_about">
@@ -27,7 +27,7 @@ export default function About({title, description}) {
                             <div className="hr_primary hr_first"></div>
                             {abouts?.results?.slice(0, 4).map((about) => (
                                 <div key={about?.id} className="card_about">
-                                    <div className="item_about" data-aos="fade-left" data-aos-delay={150}>
+                                    <div className="item_about" data-aos="fade-up" data-aos-delay={150}>
                                         <div className="text text-xl text-semibold "> {about?.title} </div>
                                         <div className="text text-base my_start_8">{about?.description} </div>
                                     </div>
