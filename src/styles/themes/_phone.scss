@@ -46,7 +46,12 @@
             }
         }
     }
-    
+    .animated_radius {
+        width: 200px;
+        height: 150px;
+        inset-block-end: 50px ;
+        inset-inline-end: 50px ;
+    }
     // ============Skills==================================
     .skills_section {
         margin-top: 20px ;
@@ -91,7 +96,8 @@
 
     // =================Projects============================
     .model {
-         @include flex(center, end, 0) ;
+        @include flex(center, end, 0) ;
+        align-items: end !important ;
     }
     .model_xl {
         width: 100% !important ;
