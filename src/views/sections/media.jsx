@@ -28,13 +28,13 @@ export default function ContactIndex({title, description}) {
                             <div className="contacts_chaine">
 
                                 <CardContact title="Email" description={user?.email} type="mailto">
-                                    <Mail size={61} className="text_primary"/>
+                                    <Mail size={57} className="text_primary"/>
                                 </CardContact>
                                 <CardContact title="Call Phone" description={user?.profile.phone} type="tel" >
-                                    <PhoneCall size={56} className="text_primary"/>
+                                    <PhoneCall size={53} className="text_primary"/>
                                 </CardContact>
                                 <CardContact title="Whatssap" description={user?.profile.whatsapp_url} phone={user?.profile.phone}>
-                                    <MessageCircleIcon size={58} className="text_primary"/>
+                                    <MessageCircleIcon size={52} className="text_primary"/>
                                 </CardContact>
 
                             </div>

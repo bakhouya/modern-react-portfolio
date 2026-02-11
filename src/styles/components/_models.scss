@@ -5,9 +5,7 @@
     position: fixed ;
     inset: 0 ;
     @include flex(center, center, 0) ;
-    // background-color: rgba(19, 58, 57, 0.562) ;
     z-index: 5000 ;
-    // display : none !important;
 }
 .model_opacity {
     position: fixed ;
@@ -56,4 +54,22 @@
     border-bottom: 1px solid $border_color ;
     @include flex(space-between, center, 15px) ;
     padding: $padding ;
+}
+
+
+.model_loader {
+    position: fixed ;
+    inset: 0 ;
+    @include flex(center, center, 0) ;
+    background-color: rgba(19, 58, 57, 0.562) ;
+    z-index: 5000 ;
+    .box_loader {
+        @include flex(center, center, 0) ;
+        padding: 20px 25px 0px 35px;
+        width: 50% ;
+        height: 100px ;
+        border-radius: $radius_base ;
+        background-color: $bg_color ;
+        box-shadow: $shadow_1 ;
+    }
 }

@@ -44,11 +44,18 @@ export function PortfolioProvider({ children }) {
         queryFn: async () => {
             
             const visitorResponse = await trackVisitor();
-            if (visitorResponse?.visitor?.key) {
-                localStorage.setItem('visitor', JSON.stringify(visitorResponse));
-                document.cookie = `visitor_hash=${visitorResponse.visitor.key}`;
+             if (visitorResponse?.visitor?.key && typeof window !== "undefined") {
+                // Save localStorage Visitor key
+                try {
+                    localStorage.setItem('visitor', JSON.stringify(visitorResponse));
+                } catch (error) {console.log("localStorage not available");}
+                // Save Cookie Visitor key
+                try {
+                    document.cookie = `visitor_hash=${visitorResponse.visitor.key}; path=/; SameSite=Lax`;
+                } catch (error) {console.log("Cookie blocked");}
             }
-            return visitorResponse;
+            
+            return visitorResponse ;
         }
     });
     const userQuery = useQuery({queryKey: ["user"], queryFn: GetUser,});

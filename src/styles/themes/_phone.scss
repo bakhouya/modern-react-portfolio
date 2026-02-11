@@ -4,11 +4,14 @@
     .wave_bottom {top: -7px !important;}
     .footer_web {display: none ;}
     // =================Hero=====================================
+    .hero_secrion {
+        padding-bottom: 0 ;
+    }
     .content_hero {
         width: 100% ;
         margin: auto ;
         padding-top: 40px ;
-        height: calc(100vh - 240px) ;
+        height: calc(100vh - 250px) ;
     }
     // ==================Header=================================
     .header {
@@ -37,7 +40,9 @@
    
     // ================About================================
     .about_section {
+        padding-top: 0 ;
         margin-bottom: 20px !important ;
+        margin-top: 0 !important ;
         .content_about {
             Display: block !important ; 
             .card_about:last-child {
@@ -53,6 +58,10 @@
                 width: 80% !important;
                 margin: auto ;
                 margin-bottom: 10px ;
+                img {
+                    aspect-ratio: 1/1 ;
+                    border-radius: 50% ;
+                }
             }
         }
     }
@@ -64,7 +73,7 @@
     }
     // ============Skills==================================
     .skills_section {
-        margin-top: 20px ;
+        margin-top: 16px ;
         padding-block: 0px ;  
     }
     .cards_skills {
@@ -72,12 +81,12 @@
         gap: $padding ;
     }
     .projects_section {
-        padding-block: 20px ;
-        margin-top: 0 !important;
+        padding-block: 10px ;
+        margin-top: -13px !important ;
     }
     .services_section {
         padding-block : 15px ;
-        margin: 0 ;
+        margin-top: -15px ;
     }
     .title_section {
         margin-bottom: 25px ;
@@ -93,7 +102,8 @@
     }
     // =================Certificates=======================
     .certificate_section {
-        margin-top: 0 !important;
+        margin-top: -13px !important ;
+        padding-bottom: 0 ;
         .card_certificate {
             flex-wrap: wrap ;
             @include flex(start, start, 0px) ;
@@ -113,12 +123,12 @@
         width: 100% !important ;
     }
     .content_model {
-        height: calc(100vh - 80px) !important;
+        height: calc(70vh) !important;
         .hidden_text {display: none ;}
     }
     // ===================Contact==================================
     .contact_index {
-        margin-top: 100px ;   
+        margin-top: 70px ;   
         .content_contact {
             padding-block: 40px ;    
         }

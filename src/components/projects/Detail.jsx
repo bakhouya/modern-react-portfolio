@@ -6,12 +6,11 @@ import { useState } from "react";
 import Clicked from "../../utils/Click";
 import LikeProject from "./Like"
 import SkillsProject from "./SkillsProject"
-import { useQuery, useQueryClient} from "@tanstack/react-query";
+import { useQuery} from "@tanstack/react-query";
 import {getProjectDetail} from "../../services/trackService"
 
 export default function DetailProject({data, onClose }) {
     const [carousel, setCarousel] = useState(0)
-    const queryClient = useQueryClient();
     
     const project = useQuery({
         queryKey: ["project", data?.id],
@@ -30,9 +29,13 @@ export default function DetailProject({data, onClose }) {
     }
     
     if(project.isLoading) {
-        <div className='container_loader'>
-            <div className="lds-ripple"><div></div><div></div></div>
-        </div>
+        return (
+            <div className='model_loader'>
+                <div className="box_loader">
+                <div className="lds-ripple"><div></div><div></div></div>
+                </div>
+            </div>
+        )
     }
 
     return (
