@@ -25,6 +25,9 @@
         .btn_lg, .nav-list {
             Display : none ;  
         }
+        .phone_btn {
+            @include flex(center, center, 8px) ;
+        }
         .header-container {
             height: 58px ;
         }

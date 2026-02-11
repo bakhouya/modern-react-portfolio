@@ -37,13 +37,26 @@
         border-radius: $radius_base ;
         position: relative;
         @include flex(center, center, 10px ) ;
-        &:hover {
+        &:hover, &.active {
             background-color: $base_color ;
+        }
+    }
+    .navigate_icon {
+        &.active {
+            color: $primary ;
         }
     }
 
 }
 
+.phone_btn {
+    height: 35px ;
+    padding: 10px ;
+    border-radius: $radius_half ;
+    cursor: pointer ;
+    border: 1px solid $border_color !important ;
+    display: none ;
+}
 
 
 .logo {cursor: pointer ;}

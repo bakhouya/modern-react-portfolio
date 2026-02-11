@@ -69,13 +69,16 @@ export default function Header(){
                 {/* Action button */}
                 <div className="flex_start_center gap_10">
                     <Link to={ROUTES.PROJECTS} className="btn btn_primary btn_lg radius_26 flex_center_center gap_8" 
-                        type="button" aria-label='Contact button' onClick={clicked}>
+                        type="button" aria-label='Projects portfolio link' onClick={clicked}>
                         <FolderKanban size={17}/>
                         <span className="text_btn">All Projects</span>
-                    </Link>
-                    
+                    </Link>   
+                    <Link to={ROUTES.PROJECTS} className="phone_btn" 
+                        type="button" aria-label='Projects portfolio link' onClick={clicked}>
+                        <FolderKanban size={18}/>
+                        <div className="text text-base">Projects</div>
+                    </Link>                 
                 </div>
-
             </div>
         </motion.header>
         {/*End Header top for desktop */}
@@ -85,7 +88,7 @@ export default function Header(){
             {navLinks.map((link, index) => (
 
                 <motion.li key={link.path} className="flex_center_center" onClick={() => setHoveredLink(index)} whileTap={{ y: 0 }}>
-                    <a href={link.path} className="nav_link" onClick={clicked}>
+                    <a href={link.path} className={`nav_link ${hoveredLink === index ? 'active' : ''}`} onClick={clicked}>
                         <span className={`navigate_icon ${hoveredLink === index ? 'active' : ''}`}>{link.icon}</span>   
 
                         {hoveredLink === index && (

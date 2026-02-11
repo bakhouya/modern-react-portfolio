@@ -8,6 +8,7 @@ import LikeProject from "./Like"
 import SkillsProject from "./SkillsProject"
 import { useQuery} from "@tanstack/react-query";
 import {getProjectDetail} from "../../services/trackService"
+import CarouselImages from "./CarouselImages";
 
 export default function DetailProject({data, onClose }) {
     const [carousel, setCarousel] = useState(0)
@@ -52,36 +53,13 @@ export default function DetailProject({data, onClose }) {
             <div data-aos="fade-up" className="model_xl" onClick={(e) => e.stopPropagation()}>
 
                 <div className="header_top_model">
-                    <div className="text text-2xl single-line-title text-medium">{project?.data?.title}</div>
-                    <button className="text text-base" type="button" onClick={onClose}><X/></button>
+                    <div className="text text-2xl single-line-title text_semibold">{project?.data?.title}</div>
+                    <button className="text text-base my_start_5" type="button" onClick={onClose}><X/></button>
                 </div>
                 <div className="content_model scroll">
-                    <div className="header_model_xl">
-                        
+                    <div className="header_model_xl">                        
                         <div className="image_model_xl">
-                            <button className="circle circle_1 flex_center_center" 
-                                onClick={prev} type="button" arie-label="privew-carousel">
-                                <ChevronLeftCircle size={21} className="text text_primary"/>
-                            </button>
-                            <button className="circle circle_2 flex_center_center" 
-                                    onClick={Next} type="button" arie-label="pnext-carousel">
-                                <ChevronRightCircle size={21} className="text text_primary"/>
-                            </button>
-                            <img src={data?.images_details[carousel].image} alt={data?.title} loading="lazy" />
-
-                        </div>
-
-                        <div className="nav_images_project">
-                            {data?.images_details?.map((_, index) => (
-                                <div key={index} 
-                                    className={`item_nav ${carousel === index ? "active" : ""}`} 
-                                    role="button"
-                                    aria-label={`Image ${index + 1}`}
-                                    onClick={() => {
-                                        Clicked()  
-                                        setCarousel(index)
-                                    }}/>
-                            ))}
+                            <CarouselImages images={project?.data?.images_details} />
                         </div>
                     </div>
 
@@ -102,7 +80,7 @@ export default function DetailProject({data, onClose }) {
                         
                         <div className="details_project my_start_10">
                             <div className="flex_between_center">
-                                <div className="text text-base text_secoundary border border_secoundary py_1 px_12 radius_30">
+                                <div className="text text-sm text_secoundary border border_secoundary py_1 px_12 radius_30">
                                     {project?.data?.type_details?.title}
                                 </div>
                                 <div className="flex_start_center">

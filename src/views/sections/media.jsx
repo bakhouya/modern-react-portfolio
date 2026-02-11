@@ -16,7 +16,7 @@ export default function ContactIndex({title, description}) {
                 <div className="container">
                     <div className="content_contact">
                         <div className="header_contact_index">
-                            <div className="text text-2xl text-center text_primary text-semibold">{title}</div>
+                            <div className="text text-2xl text-center text_primary text_semibold">{title}</div>
                             <div className="text text-base text-center my_start_4">{description}</div>
                         </div>
 

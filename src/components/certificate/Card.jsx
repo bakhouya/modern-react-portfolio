@@ -20,7 +20,7 @@ export default function CardCertificate({index, data}) {
                         <div className="text text-sm">
                             Organized By : 
                         </div>
-                        <div className="text text-sm text-semibold">
+                        <div className="text text-sm text_semibold">
                             {data?.issuing_organization}
                         </div>
                     </div>

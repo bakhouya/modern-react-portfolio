@@ -13,12 +13,12 @@
 }
 .image_about {
     position: relative;
-    width: 45% ;
+    width: 35% ;
     
     img {
         width: 100% ;
-        aspect-ratio: 1 / 0.85 ;
-        border-radius: $radius_base ;
+        aspect-ratio: 1/1 ;
+        border-radius: 50%  ;
     }
 }
 
