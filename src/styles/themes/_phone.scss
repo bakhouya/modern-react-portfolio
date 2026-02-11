@@ -145,6 +145,39 @@
         width: 90% ;
         transform: translateX(-0%);
     }
+
+
+    // ======================== scrol ==========
+    .links_project {
+        .icon_link {
+            width: 30px ;
+            height: 30px ;
+            border-radius: 50% ;
+            @include flex(center, center,0) ;
+            background-color: $hover_color ;
+        }
+        .slach {
+            margin-inline: 6px ;
+        }
+    }
+    
+    .scroll {
+        position: relative;
+        &::-webkit-scrollbar {
+            width: 2px; 
+        }
+        &::-webkit-scrollbar-track {
+            background: $border_color ; 
+            width: 2px ; 
+            border-radius: 2.5px ;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: rgb(182, 184, 185) ;  
+            width: 3px;  
+            border-radius: 10px ;
+            margin: 0 auto ;  
+        }
+    }
    
     
 }

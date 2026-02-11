@@ -83,10 +83,10 @@ export default function DetailProject({data, onClose }) {
                                 <div className="text text-sm text_secoundary border border_secoundary py_1 px_12 radius_30">
                                     {project?.data?.type_details?.title}
                                 </div>
-                                <div className="flex_start_center">
+                                <div className="flex_start_center links_project">
                                     {project?.data?.github_url && (
                                         <a href={project?.data?.github_url} className="flex_start_center gap_6 pointer" target="_blank" rel="noopener noreferrer">
-                                            <Github className="text text-base" size={19}/>
+                                            <div className="icon_link"><Github className="text text-base" size={19}/></div>
                                             <div className="text text-base hidden_text"> Githib </div>
                                         </a>
                                     )}
@@ -94,7 +94,7 @@ export default function DetailProject({data, onClose }) {
                                         <>
                                         <div className="slach"></div>
                                         <a href={project?.data?.demo_url} className="flex_start_center gap_6 pointer" target="_blank" rel="noopener noreferrer">
-                                            <Eye className="text text-base" size={19}/>
+                                            <div className="icon_link"><Eye className="text text-base" size={19}/></div>
                                             <div className="text text-base hidden_text"> Privews </div>
                                         </a>
                                         </>
@@ -103,7 +103,7 @@ export default function DetailProject({data, onClose }) {
                                         <>
                                         <div className="slach"></div>
                                         <a href={project?.data?.video_url} className="flex_start_center gap_6 pointer" target="_blank" rel="noopener noreferrer">
-                                            <Youtube className="text text-base" size={19}/>
+                                            <div className="icon_link"><Youtube className="text text-base" size={19}/></div>
                                             <div className="text text-base hidden_text"> Video </div>
                                         </a>
                                         </>
@@ -118,14 +118,14 @@ export default function DetailProject({data, onClose }) {
 
                         
                         <div className="skills_project ">
-                            <div className="text text-lg text-medium my_end_6">Skills</div>
+                            <div className="text text-lg text_semibold my_end_6">Skills</div>
                             <SkillsProject skills={project?.data?.skills_details} />
                         </div>
 
                         <div className="hr_primary"></div>
 
                         <div className="my_end_20">
-                            <div className="text text-lg text-medium">Details </div>
+                            <div className="text text-lg text_semibold">Details </div>
                             <div className="text text-base my_start_4"> {project?.data?.details} </div>
                         </div>
                         
