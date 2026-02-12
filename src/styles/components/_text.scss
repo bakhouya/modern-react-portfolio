@@ -10,10 +10,10 @@
     overflow-wrap: break-word;
     hyphens: auto ;
     // text-transform: capitalize; 
-    font-family: 'unageo', sans-serif !important ; 
+    font-family: $font !important ; 
 }
 .text_semibold {
-    font-family: 'unageo', sans-serif !important ; 
+    font-family: $font !important ; 
     font-weight: 700 ;
 }
 

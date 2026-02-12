@@ -29,7 +29,7 @@ export default function DetailProject({data, onClose }) {
         carousel > 0 ? setCarousel(carousel - 1): setCarousel(data?.images_details.length - 1)
     }
     
-    if(project.isLoading) {
+    if(project.isLoading && !project.data && project.isError) {
         return (
             <div className='model_loader'>
                 <div className="box_loader">
@@ -83,7 +83,7 @@ export default function DetailProject({data, onClose }) {
                                 <div className="text text-sm text_secoundary border border_secoundary py_1 px_12 radius_30">
                                     {project?.data?.type_details?.title}
                                 </div>
-                                <div className="flex_start_center links_project">
+                                <div className="flex_center_center links_project">
                                     {project?.data?.github_url && (
                                         <a href={project?.data?.github_url} className="flex_start_center gap_6 pointer" target="_blank" rel="noopener noreferrer">
                                             <div className="icon_link"><Github className="text text-base" size={19}/></div>
