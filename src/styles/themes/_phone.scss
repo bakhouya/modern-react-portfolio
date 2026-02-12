@@ -1,6 +1,9 @@
 
 @media (max-width: 640px) {
-    body {padding-bottom: 48px ;  }
+    html , * {
+        font-family: 'unageo', 'Switzer', "Montserrat", "Fredoka", "unageo", "Outfit", sans-serif !important ; 
+    }
+     body {padding-bottom: 48px ;  }
     .wave_bottom {top: -7px !important;}
     .footer_web {display: none ;}
     // =================Hero=====================================
