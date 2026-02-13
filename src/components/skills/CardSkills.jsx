@@ -5,7 +5,7 @@ export default function CardSkills({skill, index}) {
 
 
     return (
-        <div className="card_skill" data-aos="fade-up" data-aos-delay={index * 150} 
+        <div className="card_skill" data-aos="fade-up" data-aos-delay={index * 50} 
             style={{
                 border: '1px solid ' + addOpacity(skill?.color, 0.2), 
                 backgroundColor: addOpacity(skill?.color, 0.1),

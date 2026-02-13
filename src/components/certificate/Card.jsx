@@ -5,11 +5,11 @@ import {ChevronRight } from "lucide-react"
 export default function CardCertificate({index, data}) {
 
     return (
-        <div className="card_certificate" data-aos="fade-up" data-aos-delay={index * 150}>
+        <div className="card_certificate" data-aos="fade-up" data-aos-delay={index * 80}>
            
             <div className="info_certifcate">
                 <div className="flex_between_center">
-                    <div className="text text-xl text-medium single-line-title">{data?.title}</div>
+                    <div className="text text-xl text-medium single-line-title"> {index}: {data?.title}</div>
                     <div className="text text-sm">{data?.expiration_date}</div>
                 </div>
 

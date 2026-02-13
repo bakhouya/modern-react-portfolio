@@ -10,7 +10,7 @@ export default function CardProject({index, project, showDetails}) {
     }
     return (
         <>
-        <div className="card_project" data-aos="zoom-in" data-aos-delay={index * 150}>
+        <div className="card_project" data-aos="zoom-in" data-aos-delay={index * 100}>
 
             <div className="header_card flex_center_center" onClick={() => GetDetails(project)}>
                 <div className="inset_text text text-xs border border_secoundary radius_20 px_10 text_secoundary top_10"> 

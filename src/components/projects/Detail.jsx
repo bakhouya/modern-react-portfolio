@@ -29,7 +29,7 @@ export default function DetailProject({data, onClose }) {
         carousel > 0 ? setCarousel(carousel - 1): setCarousel(data?.images_details.length - 1)
     }
     
-    if(project.isLoading && !project.data ){
+    if(project.isLoading || !project.data ){
         return (
             <div className='model_loader'>
                 <div className="box_loader">
@@ -126,7 +126,7 @@ export default function DetailProject({data, onClose }) {
 
                         <div className="my_end_20">
                             <div className="text text-lg text_semibold">Details </div>
-                            <div className="text text-base my_start_4"> {project?.data?.details} </div>
+                            <div className="text text-base my_start_4" style={{ whiteSpace: 'pre-wrap' }}> {project?.data?.details} </div>
                         </div>
                         
                         <div className="hr_primary"></div>
