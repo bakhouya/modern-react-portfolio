@@ -21,10 +21,11 @@
         z-index: 2 ;
     }
     .header_card {
-        max-height: 280px ;
         background-color: $hover_color ;
         border-radius: $radius_base ;
         overflow: hidden ;
+        background-color: $base_color ;
+        aspect-ratio: 16/9 ;
         background-color: $base_color ;
         .image_project {
             @include transition() ;

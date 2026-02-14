@@ -150,20 +150,7 @@
     }
 
 
-    // ======================== scrol ==========
-    .links_project {
-        .icon_link {
-            width: 30px ;
-            height: 30px ;
-            border-radius: 50% ;
-            @include flex(center, center,0) ;
-            background-color: $hover_color ;
-        }
-        .slach {
-            margin-inline: 6px ;
-        }
-    }
-    
+    // ======================== scrol ==========  
     .scroll {
         position: relative;
         &::-webkit-scrollbar {

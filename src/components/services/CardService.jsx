@@ -25,7 +25,7 @@ export default function CardService({index, data, contact}) {
                         "Hello, I visited your website and I would like to inquire about your web development services."
                     )}`}
                     className="btn btn_lg border_2 flex_center_center radius_30 w_8 btn_primary my_start_20 mx_auto"
-                    >
+                    target="_blank" rel="noopener noreferrer">
                     Start your project
                 </a>
             </div>
