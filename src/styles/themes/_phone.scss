@@ -131,6 +131,7 @@
     .content_model {
         height: calc(70vh) !important;
         .hidden_text {display: none ;}
+        border-radius: $radius_base $radius_base 0 0 ;
     }
     // ===================Contact==================================
     .contact_index {
