@@ -1,11 +1,16 @@
 
-
 import {ChevronRight } from "lucide-react"
 
-export default function CardCertificate({index, data}) {
+export default function CardCertificate({index, data, showDetails}) {
+
+
+    function GetDetails(item) {
+        showDetails(item)
+    }
 
     return (
-        <div className="card_certificate" data-aos="fade-up" data-aos-delay={index * 80}>
+
+        <div className="card_certificate" data-aos="fade-up" data-aos-delay={index * 80} onClick={() => GetDetails(data)}>
            
             <div className="info_certifcate">
                 <div className="flex_between_center">
@@ -34,5 +39,6 @@ export default function CardCertificate({index, data}) {
                     
             </div>
         </div>
+
     )
 }

@@ -25,7 +25,7 @@
         overflow-x: hidden ;
         overflow-y: scroll ;
         padding: 13px ;
-        height: calc(90vh - 50px) ;
+        height: calc(80vh - 50px) ;
         .header_model_xl {
             position: relative ;
             .image_model_xl {
@@ -55,6 +55,9 @@
     @include flex(space-between, center, 15px) ;
     padding: $padding ;
 }
+.footer_model {
+    border-top: 1px solid $border_color ;
+}
 
 
 .model_loader {
@@ -72,4 +75,8 @@
         background-color: $bg_color ;
         box-shadow: $shadow_1 ;
     }
+}
+
+.bg_base {
+    background-color: $base_color ;
 }

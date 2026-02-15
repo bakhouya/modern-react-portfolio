@@ -11,8 +11,7 @@ import {getProjectDetail} from "../../services/trackService"
 import CarouselImages from "./CarouselImages";
 
 export default function DetailProject({data, onClose }) {
-    const [carousel, setCarousel] = useState(0)
-    
+
     const project = useQuery({
         queryKey: ["project", data?.id],
         queryFn: () => getProjectDetail(data?.id),
@@ -20,14 +19,7 @@ export default function DetailProject({data, onClose }) {
         staleTime: 1000 * 60,
         refetchInterval: 1000 * 60,
     });
-    function Next(){
-        Clicked()
-        carousel < data?.images_details.length  - 1 ? setCarousel(carousel + 1) : setCarousel(0)
-    }
-    function prev(){
-        Clicked()
-        carousel > 0 ? setCarousel(carousel - 1): setCarousel(data?.images_details.length - 1)
-    }
+
     
     if(project.isLoading || !project.data ){
         return (
@@ -128,33 +120,31 @@ export default function DetailProject({data, onClose }) {
                             <div className="text text-lg text_semibold">Details </div>
                             <div className="text text-base my_start_4" style={{ whiteSpace: 'pre-wrap' }}> {project?.data?.details} </div>
                         </div>
-                        
-                        <div className="hr_primary"></div>
 
-                        <div className="flex_center_center gap_10 my_end_20">
-                            {project?.data?.demo_url && (
-                                <Link to={project?.data?.demo_url} className="btn btn_md btn_primary flex_center_center radius_30 gap_6" 
-                                    target="_blank" rel="noopener noreferrer">
-                                    <Eye size={19} className="text_light"/>
-                                    Privews
-                                </Link>
-                            )}
-                            {project?.data?.github_url && (
-                                <Link to={project?.data?.github_url}  className="btn btn_md btn_info flex_center_center radius_30 gap_6" 
-                                    target="_blank" rel="noopener noreferrer">
-                                    <Github size={19} className="text_light"/>
-                                    Github
-                                </Link>
-                            )}
-                            {project?.data?.video_url && (
-                                <Link to={project?.data?.video_url} className="btn btn_md btn_danger flex_center_center radius_30 gap_6" 
-                                    target="_blank" rel="noopener noreferrer">
-                                    <Youtube size={19} className="text_light"/>
-                                    Youtube
-                                </Link>
-                            )}
-                        </div>
                     </div>
+                </div>
+                 <div className="flex_center_center gap_10 py_10 footer_model">
+                    {project?.data?.demo_url && (
+                        <Link to={project?.data?.demo_url} className="btn btn_md btn_primary flex_center_center radius_30 gap_6" 
+                            target="_blank" rel="noopener noreferrer">
+                            <Eye size={19} className="text_light"/>
+                            Privews
+                        </Link>
+                    )}
+                    {project?.data?.github_url && (
+                        <Link to={project?.data?.github_url}  className="btn btn_md btn_info flex_center_center radius_30 gap_6" 
+                            target="_blank" rel="noopener noreferrer">
+                            <Github size={19} className="text_light"/>
+                            Github
+                        </Link>
+                    )}
+                    {project?.data?.video_url && (
+                        <Link to={project?.data?.video_url} className="btn btn_md btn_danger flex_center_center radius_30 gap_6" 
+                            target="_blank" rel="noopener noreferrer">
+                            <Youtube size={19} className="text_light"/>
+                            Youtube
+                        </Link>
+                    )}
                 </div>
                 
             </div>
