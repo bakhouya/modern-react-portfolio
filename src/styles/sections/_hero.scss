@@ -23,8 +23,19 @@
     margin: auto ;
     padding-top: 50px ;
 }
-
-
+.text_gradient {
+    background: linear-gradient(to right, $primary, #ff6b08, #cf23cf, $secoundary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.text_gradient_2 {
+    // background: linear-gradient(to right, $secoundary, #cf23cf, #ff6b08, $primary);
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // background-clip: text;
+    // color: $secoundary !important;
+}
 .badge_primary {
     padding: 3px 20px ;
     border: 1px solid $border_color; 

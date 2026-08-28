@@ -16,15 +16,18 @@ button {
     z-index: 2 ;
 }
 
-$buttons: ("xs": 34px , "sm": 40px , "md": 45px , "lg": 50px , "xl": 54px );
+$buttons: ("xs": 34px , "sm": 40px , "md": 42px , "lg": 45px , "xl": 54px );
 
 
 
 @each $name, $color in $colors {
     .btn_#{$name}{ 
         @include gradient($color) ;
-        // background-color: $color ;
+        background: linear-gradient(to right,rgb($primary, 0.2), $primary, rgb($primary, 0.2));
         color: white ;
+        &:hover {
+             background: linear-gradient(to right,rgb($secoundary, 0.6), $secoundary, rgb($secoundary, 0.6));
+        }
     }
     .btn_outline_#{$name}{ 
         border: 2px solid $color ;

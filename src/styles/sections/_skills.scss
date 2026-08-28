@@ -7,7 +7,7 @@
     }
 }
 .cards_skills {
-    @include grid(4) ;
+    @include grid(3) ;
     gap: $padding ;
     .card_skill {
         @include card() ;
@@ -17,20 +17,27 @@
         padding: 20px ;
         cursor: pointer;
         @include transition() ;
+        // box-shadow: rgba(128, 126, 124, 0.1) 0px 10px 10px;
         &:hover {
             transform: translateY(-10px) ;
+            top: -10px ;
         }
         &.more_skills {
-            background-color: $secoundary ;
+            background-color: $primary ;
+            border-radius: $radius_base ;
         }
     }
     .icon_skill {
         position: relative;
-        width: 45px ;
+        width: 65px ;
         margin-inline: auto ;
+        
         img {
             width: 100% ;
+            border-radius: 50% ;
+            
         }
+        
     }
 
 }
@@ -49,7 +56,7 @@
             position: absolute ;
             width: 12px ; height: 12px ;
             border-radius: 3px ;
-            background-color: $primary ;
+            background-color: $secoundary ;
             top: 50% ;
             transform: translateY(-50%) rotate(-45deg);
         }
