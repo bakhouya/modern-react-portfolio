@@ -5,7 +5,7 @@ import { PortfolioContext } from "../../providers/PortfolioProvider";
 import { useContext } from "react"; 
 
 
-export default function CardService({index, data, contact}) {
+export default function CardService({index, data }) {
     // Get user  data from Context provider
     const {user} = useContext(PortfolioContext);
 
@@ -26,7 +26,7 @@ export default function CardService({index, data, contact}) {
                     )}`}
                     className="btn btn_lg border_2 flex_center_center radius_30 w_8 btn_primary my_start_20 mx_auto"
                     target="_blank" rel="noopener noreferrer">
-                    Start your project
+                    Let's Work Together
                 </a>
             </div>
 

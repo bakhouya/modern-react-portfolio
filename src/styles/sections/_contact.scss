@@ -28,13 +28,18 @@
         background-color: $bg_color ;
         @include flex(space-between, center, 0) ;
         cursor: pointer ;
+        color: white ;
     }
 }
 .item_media {
     width: 45px ;
     height: 45px ;
-    border-radius: $radius_base ;
-    background-color: $primary ;
+    border-radius: 50% ;
+    // background-color: $primary ;
+    @include gradient($secoundary) ;
+    &:hover {
+        @include gradient($primary) ;
+    }
 }
 .circle {
     position: absolute ;

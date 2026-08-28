@@ -7,7 +7,7 @@ import { useContext } from "react";
 
 export default function Services({title, description}) {
     // Get user, services from context provider
-    const {user, services } = useContext(PortfolioContext);
+    const {services } = useContext(PortfolioContext);
     // Check if services data not fount return "NULL"
     if(services.results.length <= 0 ) {return null}
     // if we have services data return the section JSX component
@@ -20,7 +20,7 @@ export default function Services({title, description}) {
                     {/* cards services */}
                     <div className="cards_services">
                         {services?.results?.slice(0, 4).map(service => (
-                            <CardService key={service?.id} index="1" data={service} contact={user?.profile?.whatsapp_url}/>
+                            <CardService key={service?.id} index="1" data={service} />
                         ))}
                     </div>
                 </div>

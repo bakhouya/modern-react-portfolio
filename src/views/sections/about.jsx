@@ -5,6 +5,8 @@ import Title from "../../components/basic/Title"
 import { PortfolioContext } from "../../providers/PortfolioProvider";
 import { useContext } from "react"; 
 
+
+
 export default function About({title, description}) {
     // Get user & abouts data from Context provider
     const {user, abouts } = useContext(PortfolioContext);
@@ -20,7 +22,7 @@ export default function About({title, description}) {
                 {/* Content section about */}
                 <div className="content_about">
                     <div className="image_about" data-aos="fade-up">
-                        <img src={user?.profile?.avatar} alt="about section image" loading="lazy"/>
+                        <img src={user?.profile?.avatar} alt="about section image" loading="lazy" className="image_avatar_about"/>
                     </div>
                     <div className="info_about">
                         <div className="">
@@ -41,3 +43,4 @@ export default function About({title, description}) {
         </section>
     );
 };
+

@@ -23,7 +23,9 @@ export default function Hero() {
                                         initial={{ scale: 0.8, opacity: 0 }} 
                                         animate={{ scale: 1, opacity: 1 }} 
                                         transition={{ duration: 1.5 }}>
-                                 I'm <span className="text_primary">{user?.first_name} {user?.last_name} </span> a {user?.profile.job_title} 
+                                 I'm  <span className="text_primary text_gradient">{user?.first_name} {user?.last_name} </span> a 
+                                 <span className="text_gradient_2"> {user?.profile.job_title} </span>
+                                  
                             </motion.div>
                         </div>
                         <motion.div className="text text-base my_start_25 text-center text_sm_dark" 

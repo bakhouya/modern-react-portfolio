@@ -11,7 +11,9 @@ export default function CardContact({title, description, type, phone, children})
                 <div className="flex_start_center">{children}</div>
                 <div className="slach"></div>
                 <div className="info_flex">
-                    <div className="text text-lg text-medium text_base_dark">{title}</div>
+                    {/* text_base_dark */}
+                    <div className="text text-xl text-medium text_base_dark">{title}</div>
+                    {/* text_psis */ }
                     <div className="text text-base text_psis">
                         {type ? description : phone}
                     </div>

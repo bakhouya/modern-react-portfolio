@@ -26,7 +26,7 @@ export default function Skills({title, description}) {
                         <Title title={title} description={description} />
                         {/* cards skills */}
                         <div className="cards_skills">
-                            {skills?.slice(0, 7).map((skill, index) => (
+                            {skills?.slice(0, 5).map((skill, index) => (
                                 <CardSkills key={skill.id} skill={skill} index={index}/>
                             ))}
                             {skills.length > 7 && <Skill count={skills.length}/>}

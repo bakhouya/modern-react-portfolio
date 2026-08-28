@@ -13,12 +13,33 @@
 }
 .image_about {
     position: relative;
-    width: 35% ;
+    width: 34% ;
     
-    img {
-        width: 100% ;
-        aspect-ratio: 1/1 ;
-        border-radius: 50%  ;
+    // .image_avatar_about {
+    //     position: relative;
+    //     width: 90% ;
+    //     aspect-ratio: 1/1 ;
+    //     border-radius: 50%  ;
+    //     z-index: 2 ;
+    //     box-shadow: 10px 5px 0px 3px $primary, -10px -5px 0px 3px $secoundary;
+    //     border: 5px solid;
+    //     border-color : $secoundary  $primary $primary $secoundary ; 
+    //     outline: none ;
+    // }
+    .image_avatar_about {
+        position: relative;
+        width: 90%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        z-index: 2;
+        border: 2px solid white ;
+        // Initial state, but we will animate it
+        animation: spinShadow 4s linear infinite ;
+        // Wait, border-color is defined in the keyframes, so we don't need to set it here, but we can set a fallback.
+        // border-color: $secoundary $primary $primary $secoundary;
+        outline: none;
+        
+        // To make it smooth, maybe use steps? No, linear is smooth.
     }
 }
 
@@ -48,4 +69,35 @@
   100% {
     border-radius: 60% 40% 70% 30% / 40% 60% 30% 70%;
   }
+}
+@keyframes rotateShadow {
+  0% {
+    box-shadow: 10px 5px 0px 3px $primary, -10px -5px 0px 3px $secoundary;
+  }
+  25% {
+    box-shadow: 5px -10px 0px 3px $primary, -5px 10px 0px 3px $secoundary;
+  }
+  50% {
+    box-shadow: -10px -5px 0px 3px $primary, 10px 5px 0px 3px $secoundary;
+  }
+  75% {
+    box-shadow: -5px 10px 0px 3px $primary, 5px -10px 0px 3px $secoundary;
+  }
+  100% {
+    box-shadow: 10px 5px 0px 3px $primary, -10px -5px 0px 3px $secoundary;
+  }
+}
+@keyframes spinShadow {
+  0% { box-shadow: 10px 5px 0px 3px $primary, -10px -5px 0px 3px $secoundary; }
+  25% { box-shadow: 5px -10px 0px 3px $secoundary, -5px 10px 0px 3px $primary; } 
+  50% { box-shadow: -10px -5px 0px 3px $primary, 10px 5px 0px 3px $secoundary; }
+  75% { box-shadow: -5px 10px 0px 3px $secoundary, 5px -10px 0px 3px $primary; }
+  100% { box-shadow: 10px 5px 0px 3px $primary, -10px -5px 0px 3px $secoundary; }
+}
+@keyframes spinBorder {
+  0% { border-color: $secoundary $primary $primary $secoundary; }
+  25% { border-color: $primary $primary $secoundary $secoundary; }
+  50% { border-color: $primary $secoundary $secoundary $primary; }
+  75% { border-color: $secoundary $secoundary $primary $primary; }
+  100% { border-color: $secoundary $primary $primary $secoundary; }
 }

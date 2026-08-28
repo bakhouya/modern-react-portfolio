@@ -3,10 +3,18 @@
 // ===============error page==================================
 .error_section {
     @include flex(center, center, 0px) ;
-    height: 80vh ;
+    height: 100vh ;
+    padding-inline: 20px ;
+    text-align: center ;
     .content_error_page {
         .icon_page_error {
             color: $danger ;
+            margin: auto ;
+            margin-bottom: 15px ;
         }
     }
+}
+.max_content {
+    width: max-content ;
+    margin: auto ;
 }
