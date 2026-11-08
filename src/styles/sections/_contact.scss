@@ -14,7 +14,7 @@
     top: -70px ;
     padding: 20px ;
     background-color: $bg_color ;
-    border-radius: $radius_base ;
+    @include radius() ;
     width: 70% ;
     border-bottom: 7px solid $secoundary ;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
@@ -24,7 +24,7 @@
     gap: $space ;
     .item_contact {
         padding: $space ;
-        border-radius: $radius_base ;
+        @include radius() ;
         background-color: $bg_color ;
         @include flex(space-between, center, 0) ;
         cursor: pointer ;
@@ -34,7 +34,7 @@
 .item_media {
     width: 45px ;
     height: 45px ;
-    border-radius: 50% ;
+    @include radius_large() ;
     // background-color: $primary ;
     @include gradient($secoundary) ;
     &:hover {

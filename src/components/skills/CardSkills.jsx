@@ -14,13 +14,13 @@ export default function CardSkills({skill, index}) {
                 <img src={skill?.icon} alt="" className="mx_auto" />
             </div>
             <div className="text text-base text-center my_start_10 text-medium"> {skill?.title} </div>
-            <div className="text text-xs text-center my_start_6 inset_text px_6 radius_20 text_white flex_center_center gap_5"
+            {/* <div className="text text-xs text-center my_start_6 inset_text px_6 radius_20 text_white flex_center_center gap_5"
                 style={{
                     backgroundColor: addOpacity(skill?.color, 0.8),
                     border: '1px solid ' + addOpacity(skill?.color, 0.8),
                 }}> 
                 {skill?.level} - {skill?.percentage}% 
-            </div>
+            </div> */}
             <div className="text text-sm text-center my_start_2 text_secoundary"> {skill?.category.title} </div>
         </div>
     )

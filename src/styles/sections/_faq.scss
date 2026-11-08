@@ -5,7 +5,7 @@
         .image_faqs img {
             width: 100% ;
             border: 1px solid $border_color ;
-            border-radius: $radius_base ;
+            @include radius() ;
         }
     }
 }
@@ -13,7 +13,7 @@
 
 
 .accordion__item {
-	border-radius: $radius_base;
+	@include radius() ;
     margin-bottom: 70px ;
     cursor: pointer ;
     padding: $space ;

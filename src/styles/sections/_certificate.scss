@@ -23,7 +23,7 @@
         padding: 15px ;
         padding-inline-start: 25px ;
         background-color: $bg_color ;
-        border-radius: $radius_base ;
+        @include radius() ;
         border-inline-start: 7px solid $bg_color ;
         cursor: pointer;
         @include transition() ;

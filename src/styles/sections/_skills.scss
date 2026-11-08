@@ -13,28 +13,29 @@
         @include card() ;
         background-color: $bg_color ;
         border: 1px solid $border_color ;
-        border-radius: $radius_base ;
+        @include radius() ;
         padding: 20px ;
         cursor: pointer;
         @include transition() ;
-        // box-shadow: rgba(128, 126, 124, 0.1) 0px 10px 10px;
         &:hover {
             transform: translateY(-10px) ;
             top: -10px ;
         }
         &.more_skills {
             background-color: $primary ;
-            border-radius: $radius_base ;
+            @include radius() ;
         }
     }
     .icon_skill {
         position: relative;
-        width: 65px ;
+        width: 70px ;
         margin-inline: auto ;
-        
+        padding: 5px ;
+        border: 0 ;
+        outline: 0 ;
         img {
             width: 100% ;
-            border-radius: 50% ;
+            @include radius_large() ;
             
         }
         
